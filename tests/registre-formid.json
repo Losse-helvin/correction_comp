@@ -1,0 +1,732 @@
+{
+ "LP_reference": {
+  "formId": "k09720745200274b",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "acces-internet-et-telephonie-pro": {
+  "formId": "b21755109108659m",
+  "categorie": 159,
+  "libelle": "Accès Internet Et Téléphonie Pro"
+ },
+ "acces-internet-et-telephonie-pro-v2": {
+  "formId": "k02300982989620g",
+  "categorie": 159,
+  "libelle": "Accès Internet Et Téléphonie Pro"
+ },
+ "accueil": {
+  "formId": "h91780808935064o",
+  "categorie": null,
+  "libelle": null
+ },
+ "agriculteur": {
+  "formId": "i27709713294098p",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "alfaromeo-tonale": {
+  "formId": "k60628376880090g",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "alfaromeo-tonale-remerciement": {
+  "formId": "l52741609562225n",
+  "categorie": null,
+  "libelle": null
+ },
+ "assurance-agriculteur": {
+  "formId": "g52511870188750m",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-agriculteur-v2": {
+  "formId": "o15370899113685j",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-assurance-professionnelle-iard-cookie": {
+  "formId": "k66326363419462d",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-assurance-professionnelle-iard-v2": {
+  "formId": "g06657732142162n",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-commerce": {
+  "formId": "g27189818142797n",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-consultant-societe-conseil-v2": {
+  "formId": "h23751036083219c",
+  "categorie": null,
+  "libelle": null
+ },
+ "assurance-consultants-societe-conseil": {
+  "formId": "a59107373586363o",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-consultants-societe-conseil - Copie": {
+  "formId": "c64830865288227m",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-estheticienne-institut-beaute": {
+  "formId": "g71650982594340a",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-estheticiennes-institut-beaute": {
+  "formId": "a46519725349109k",
+  "categorie": null,
+  "libelle": null
+ },
+ "assurance-estheticiennes-instituts-beaute": {
+  "formId": "k99088752876898m",
+  "categorie": null,
+  "libelle": null
+ },
+ "assurance-estheticiennes-instituts-beaute-v1": {
+  "formId": "f07610880923305b",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-iard-v2": {
+  "formId": "f21802735560905j",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-marchandise": {
+  "formId": "k23363466039958p",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-multirisques": {
+  "formId": "m99749046881224m",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-professionnelle-iard": {
+  "formId": "a32685583388750e",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-professionnelle-tns-v2": {
+  "formId": "e95248068762494n",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "assurance-professionnelle-tns-v2/assurance-tns-pro-v2-adw": {
+  "formId": "a17159405791032o",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "assurance-protection-sociale-collective": {
+  "formId": "n41354491904355f",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "assurance-protection-sociale-collective-v4": {
+  "formId": "b20852993385736d",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "assurance-rc-pro": {
+  "formId": "i82291809191526a",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-test-telephone": {
+  "formId": "o05139746315730b",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance-tns": {
+  "formId": "n51697025492127l",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "assurance-tns-pro-v2-adw": {
+  "formId": "i16952589797203d",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "assurance/agriculteur": {
+  "formId": "h01168015964905i",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance/assurance-professionnelle-iard-cookie": {
+  "formId": "m77152781369654c",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance/multirisques": {
+  "formId": "d53000468213191d",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance/professionnelle-iard": {
+  "formId": "n73728435082553c",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurance/protection-sociale-collective": {
+  "formId": "h03079647579568i",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "assurance/protection-sociale-collective-v4": {
+  "formId": "l05893957301412b",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "assurance/rc-pro": {
+  "formId": "k86163869617476c",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurances-multirisques-v2": {
+  "formId": "c63854933780573e",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "assurances-professionnelles": {
+  "formId": "f69710657415636e",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "automobile": {
+  "formId": "m26583889528805d",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "ayvens-france": {
+  "formId": "i31636577282571k",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "canal": {
+  "formId": "b35267334812345h",
+  "categorie": 145,
+  "libelle": "Offres Canal Pro"
+ },
+ "cartes-carburant": {
+  "formId": "m89180947478439c",
+  "categorie": 122,
+  "libelle": "Carte Carburant Badge Télépéage"
+ },
+ "celebrez-le-noel-des-salaries-avec-kadeos": {
+  "formId": "d03416996748972f",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "complementaire-retraite-tns-v2": {
+  "formId": "l11697188882592h",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "dacia-jogger": {
+  "formId": "g50663525639499d",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "ecomobility": {
+  "formId": "n44127141758206n",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "edenred-kadeos": {
+  "formId": "a73970516824061h",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "edenred-restaurant-v2": {
+  "formId": "l47209638400702e",
+  "categorie": null,
+  "libelle": null
+ },
+ "edenred-ticket-restaurant-juillet-v1": {
+  "formId": "n70723156021219n",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "edenred-titre-restaurant-v2": {
+  "formId": "b76000715833641m",
+  "categorie": null,
+  "libelle": null
+ },
+ "edenred-typ": {
+  "formId": "d49567204326535p",
+  "categorie": null,
+  "libelle": null
+ },
+ "energie": {
+  "formId": "f30809706400713d",
+  "categorie": 192,
+  "libelle": "Fournisseurs D'énergie"
+ },
+ "energie-v2": {
+  "formId": "f67757628714264i",
+  "categorie": 192,
+  "libelle": "Fournisseurs D'énergie"
+ },
+ "fiat-pro": {
+  "formId": "l84466859996481o",
+  "categorie": 213,
+  "libelle": "Fiat Professional"
+ },
+ "form-panneaux-photovoltaiques": {
+  "formId": "a54153800882281i",
+  "categorie": 135,
+  "libelle": "Panneaux Photovoltaïques"
+ },
+ "form-vehicules-utilitaires": {
+  "formId": "l34968909210809n",
+  "categorie": 178,
+  "libelle": "Véhicules Utilitaires"
+ },
+ "formulaire": {
+  "formId": "b33823574855493d",
+  "categorie": 400,
+  "libelle": "Typ Multicatégories"
+ },
+ "formulaire-globale": {
+  "formId": "f07038045734604c",
+  "categorie": 400,
+  "libelle": "Typ Multicatégories"
+ },
+ "gamme-de-rayonnage-actiflip-hd": {
+  "formId": "o58015218189106d",
+  "categorie": 173,
+  "libelle": "Rayonnage"
+ },
+ "gamme-de-rayonnage-actiflip-v4": {
+  "formId": "b61238831996892g",
+  "categorie": 173,
+  "libelle": "Rayonnage"
+ },
+ "geo": {
+  "formId": "k58045622668506o",
+  "categorie": null,
+  "libelle": null
+ },
+ "geolocalisation": {
+  "formId": "p62341810706247d",
+  "categorie": 127,
+  "libelle": "Géolocalisation"
+ },
+ "geolocalisation-de-flotte": {
+  "formId": "i42546920674381g",
+  "categorie": 127,
+  "libelle": "Géolocalisation"
+ },
+ "geolocalisation-v2": {
+  "formId": "e94646320818139j",
+  "categorie": 127,
+  "libelle": "Géolocalisation"
+ },
+ "hyundai-kona-electric-nouvelle-generation": {
+  "formId": "b65124138350163g",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "hyundai-tucson": {
+  "formId": "p68412419802798l",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "intuis": {
+  "formId": "i17425944743917j",
+  "categorie": 207,
+  "libelle": "Pompes à Chaleur"
+ },
+ "lexus-lbx": {
+  "formId": "l30334819393925p",
+  "categorie": 224,
+  "libelle": "Lexus"
+ },
+ "lexus-lbx-2": {
+  "formId": "i89650055658845g",
+  "categorie": 224,
+  "libelle": "Lexus"
+ },
+ "mentions-legales": {
+  "formId": "j76814048311203l",
+  "categorie": null,
+  "libelle": null
+ },
+ "mercedes-benz-mercedes-benz-evito": {
+  "formId": "d00050719290315j",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "mercedes-benz-nouvel-ecitan-fourgon": {
+  "formId": "i46769020452195o",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "mercedes-benz-sprinter": {
+  "formId": "l46331774107173l",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "mercedes-vous-remercie": {
+  "formId": "n47171100659755n",
+  "categorie": null,
+  "libelle": null
+ },
+ "mitsubishi-fuso": {
+  "formId": "m39945778449773h",
+  "categorie": 221,
+  "libelle": "Fuso"
+ },
+ "mitsubishi-fuso-remerciement": {
+  "formId": "j18460101578134b",
+  "categorie": null,
+  "libelle": null
+ },
+ "nettoyage-locaux-professionnels": {
+  "formId": "n61051603989783k",
+  "categorie": 134,
+  "libelle": "Nettoyage De Locaux Professionnels"
+ },
+ "nissan-ariya": {
+  "formId": "d00367735154396o",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "nissan-juke": {
+  "formId": "j69352473321047m",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "panneaux-photovoltaiques-energie-solaire": {
+  "formId": "m16565693212276c",
+  "categorie": 135,
+  "libelle": "Panneaux Photovoltaïques"
+ },
+ "panneaux-photovoltaiques-panneaux-photovoltaique-valider": {
+  "formId": "n33984269989154b",
+  "categorie": 135,
+  "libelle": "Panneaux Photovoltaïques"
+ },
+ "paritel": {
+  "formId": "f15897356822371i",
+  "categorie": 159,
+  "libelle": "Accès Internet Et Téléphonie Pro"
+ },
+ "paritel-typ": {
+  "formId": "c86169383327223l",
+  "categorie": null,
+  "libelle": null
+ },
+ "paritel-vous-rembourse": {
+  "formId": "e35304238917831a",
+  "categorie": 159,
+  "libelle": "Accès Internet Et Téléphonie Pro"
+ },
+ "paritel-vous-rembourse-v2": {
+  "formId": "b05883746448446h",
+  "categorie": 159,
+  "libelle": "Accès Internet Et Téléphonie Pro"
+ },
+ "politique-de-confidentialite-donnees-personnelles": {
+  "formId": "k02950444066655g",
+  "categorie": null,
+  "libelle": null
+ },
+ "primagaz": {
+  "formId": "d46219908421415j",
+  "categorie": 192,
+  "libelle": "Fournisseurs D'énergie"
+ },
+ "primagaz-obtenez-votre-gaz-propane-a-prix-fixe": {
+  "formId": "m15051216158149c",
+  "categorie": 192,
+  "libelle": "Fournisseurs D'énergie"
+ },
+ "primagaz-v2": {
+  "formId": "b22532739550529k",
+  "categorie": 192,
+  "libelle": "Fournisseurs D'énergie"
+ },
+ "protection-sociale-collective": {
+  "formId": "n11907646051155c",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "radius-remerciement": {
+  "formId": "l86052669585720f",
+  "categorie": null,
+  "libelle": null
+ },
+ "radius-telematics-typ": {
+  "formId": "f67893594499004c",
+  "categorie": null,
+  "libelle": null
+ },
+ "rc-pro-consultant-conseil-adw": {
+  "formId": "i19838393311115n",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "remerciement-carte-cadeau": {
+  "formId": "j70813825010293b",
+  "categorie": null,
+  "libelle": null
+ },
+ "remerciement-panneaux-solaire": {
+  "formId": "d55731978756173n",
+  "categorie": null,
+  "libelle": null
+ },
+ "remerciement-ticket-restaurant": {
+  "formId": "j46329733652629i",
+  "categorie": null,
+  "libelle": null
+ },
+ "remerciement-ticket-restaurant-v2": {
+  "formId": "i24945102289902e",
+  "categorie": null,
+  "libelle": null
+ },
+ "remerciements-panneaux-solaires": {
+  "formId": "c68773999273829i",
+  "categorie": null,
+  "libelle": null
+ },
+ "renault-capture": {
+  "formId": "m87811988202182i",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "sage-gestion-de-la-paie-hd": {
+  "formId": "m34859423157278a",
+  "categorie": 200,
+  "libelle": "Sage"
+ },
+ "sage-gestion-de-la-paie-hd-v4": {
+  "formId": "o65715518951782o",
+  "categorie": 200,
+  "libelle": "Sage"
+ },
+ "sauvie-defibrillateurs-en-entreprise": {
+  "formId": "p62680700982432k",
+  "categorie": 400,
+  "libelle": "Typ Multicatégories"
+ },
+ "securite-pro-v2": {
+  "formId": "g92275510058165e",
+  "categorie": null,
+  "libelle": null
+ },
+ "securite-professionnels": {
+  "formId": "h70927270094914e",
+  "categorie": 117,
+  "libelle": "Sécurité De Locaux"
+ },
+ "site": {
+  "formId": "p37263524601552n",
+  "categorie": null,
+  "libelle": null
+ },
+ "site-assurances": {
+  "formId": "k58894259785994l",
+  "categorie": null,
+  "libelle": null
+ },
+ "solutions-agv-amr": {
+  "formId": "l06121438539316f",
+  "categorie": 800,
+  "libelle": "Manutention Automatisée - AGV"
+ },
+ "solutions-cles": {
+  "formId": "c36464297121946a",
+  "categorie": 800,
+  "libelle": "Manutention Automatisée - AGV"
+ },
+ "solutions-industrielles-cles-en-main": {
+  "formId": "o66453998008160j",
+  "categorie": 800,
+  "libelle": "Manutention Automatisée - AGV"
+ },
+ "still-manutention": {
+  "formId": "b39307910906097e",
+  "categorie": 112,
+  "libelle": "Manutention"
+ },
+ "suivi-de-vehicules": {
+  "formId": "b73672463744974c",
+  "categorie": 127,
+  "libelle": "Géolocalisation"
+ },
+ "template-2": {
+  "formId": "a67383902338946g",
+  "categorie": null,
+  "libelle": null
+ },
+ "ticket-restaurant": {
+  "formId": "b90659570336505f",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "ticket-restaurant-": {
+  "formId": "i21422427580793d",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "ticket-restaurant-septembre": {
+  "formId": "i08328878068415k",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "ticket-restaurant-septembre-btp": {
+  "formId": "p94073864731443e",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "ticket-restaurant-v2": {
+  "formId": "d01786423443374d",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "tns-prevoyance-v2": {
+  "formId": "g40565753835715p",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "tns-prevoyance-v2-adw-test": {
+  "formId": "o20821969103387b",
+  "categorie": 462,
+  "libelle": "Assurances"
+ },
+ "too-good-to-go": {
+  "formId": "c24304270166924k",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "toyota-gamme-hybride": {
+  "formId": "m77174042346265h",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "typ-categ": {
+  "formId": "m03344244088112g",
+  "categorie": null,
+  "libelle": null
+ },
+ "typ-categories": {
+  "formId": "a96791936258597j",
+  "categorie": null,
+  "libelle": null
+ },
+ "typ-energie": {
+  "formId": "m01059181721081d",
+  "categorie": null,
+  "libelle": null
+ },
+ "typ-formulaires-caisses-thank-you-page": {
+  "formId": "b59844969090146b",
+  "categorie": null,
+  "libelle": null
+ },
+ "typ-formulaires-energie-thank-you-page": {
+  "formId": "d22374846101830h",
+  "categorie": null,
+  "libelle": null
+ },
+ "typ-formulaires-form-typ-vehicules": {
+  "formId": "j57584245916558i",
+  "categorie": 400,
+  "libelle": "Typ Multicatégories"
+ },
+ "typ-formulaires-panneaux-photovoltaiques": {
+  "formId": "c32148344157923f",
+  "categorie": null,
+  "libelle": null
+ },
+ "typ-formulaires-panneaux-thank-you-page": {
+  "formId": "g13925565944561b",
+  "categorie": null,
+  "libelle": null
+ },
+ "typ-formulaires-securite-thank-you-page": {
+  "formId": "g37036046154099g",
+  "categorie": null,
+  "libelle": null
+ },
+ "typ-formulaires-typ-caisses-enregistreuse": {
+  "formId": "n68269150536662k",
+  "categorie": 125,
+  "libelle": "Solutions D'encaissement"
+ },
+ "typ-formulaires-typ-energie-form": {
+  "formId": "h08063733257525d",
+  "categorie": 400,
+  "libelle": "Typ Multicatégories"
+ },
+ "typ-formulaires-typ-log-entreprise": {
+  "formId": "c73227670821510c",
+  "categorie": 400,
+  "libelle": "Typ Multicatégories"
+ },
+ "typ-formulaires-typ-panneaux-form": {
+  "formId": "f05405569712046n",
+  "categorie": 400,
+  "libelle": "Typ Multicatégories"
+ },
+ "typ-formulaires-typ-secu-form": {
+  "formId": "f96296225615491n",
+  "categorie": 400,
+  "libelle": "Typ Multicatégories"
+ },
+ "typ-formulaires-vehicules-thank-you-page": {
+  "formId": "b73507717054229j",
+  "categorie": null,
+  "libelle": null
+ },
+ "typ-ticket-restaurant": {
+  "formId": "k18847249347407l",
+  "categorie": null,
+  "libelle": null
+ },
+ "une-rentree-sous-le-signe-du-pouvoir-d-achat": {
+  "formId": "h09054651109041c",
+  "categorie": 215,
+  "libelle": "Titres Resto Cartes Cadeau"
+ },
+ "vehicules-de-societe-hd": {
+  "formId": "i33216978458662p",
+  "categorie": 227,
+  "libelle": "Véhicules RCS"
+ },
+ "vehicules-professionnel-v2": {
+  "formId": "a89211738387675m",
+  "categorie": null,
+  "libelle": null
+ },
+ "vehicules-utilitaires": {
+  "formId": "h96271014447227c",
+  "categorie": 178,
+  "libelle": "Véhicules Utilitaires"
+ },
+ "voiture-nouveau-range-rover": {
+  "formId": "e73039729420040m",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "voiture-range-rover": {
+  "formId": "d39455142950559k",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ },
+ "volvo": {
+  "formId": "k37199919091968i",
+  "categorie": 138,
+  "libelle": "Véhicules Professionnels"
+ }
+}

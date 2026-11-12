@@ -1,0 +1,260 @@
+[
+  {
+    "site": "acces-internet-et-telephonie-pro",
+    "formId": "b21755109108659m",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "assurance-assurance-professionnelle-iard-cookie",
+    "formId": "k66326363419462d",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "assurance-commerce",
+    "formId": "g27189818142797n",
+    "gtm": "GTM-WMVZJKS",
+    "micro": "reponse_4"
+  },
+  {
+    "site": "assurance-marchandise",
+    "formId": "k23363466039958p",
+    "gtm": "GTM-WMVZJKS",
+    "micro": "reponse_4"
+  },
+  {
+    "site": "assurance-multirisques",
+    "formId": "m99749046881224m",
+    "gtm": "GTM-53SH7D7F",
+    "micro": "reponse_4"
+  },
+  {
+    "site": "assurance-professionnelle-iard",
+    "formId": "a32685583388750e",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "assurance-professionnelle-tns-v2",
+    "formId": "e95248068762494n",
+    "gtm": "GTM-WMVZJKS",
+    "micro": "reponse_3"
+  },
+  {
+    "site": "assurance-protection-sociale-collective",
+    "formId": "n41354491904355f",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "assurance-rc-pro",
+    "formId": "i82291809191526a",
+    "gtm": "GTM-53SH7D7F",
+    "micro": "reponse_4"
+  },
+  {
+    "site": "automobile",
+    "formId": "m26583889528805d",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "complementaire-retraite-tns-v2",
+    "formId": "l11697188882592h",
+    "gtm": "GTM-WMVZJKS",
+    "micro": "reponse_3"
+  },
+  {
+    "site": "energie",
+    "formId": "f30809706400713d",
+    "gtm": "GTM-WMVZJKS",
+    "micro": ""
+  },
+  {
+    "site": "geolocalisation",
+    "formId": "p62341810706247d",
+    "gtm": "GTM-WMVZJKS",
+    "micro": ""
+  },
+  {
+    "site": "panneaux-photovoltaiques-energie-solaire",
+    "formId": "m16565693212276c",
+    "gtm": "GTM-WMVZJKS",
+    "micro": ""
+  },
+  {
+    "site": "securite-professionnels",
+    "formId": "h70927270094914e",
+    "gtm": "GTM-WMVZJKS",
+    "micro": ""
+  },
+  {
+    "site": "tns-prevoyance-v2-adw-test",
+    "formId": "o20821969103387b",
+    "gtm": "GTM-WMVZJKS",
+    "micro": "reponse_3"
+  },
+  {
+    "site": "typ-formulaires-form-typ-vehicules",
+    "formId": "j57584245916558i",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "typ-formulaires-typ-panneaux-form",
+    "formId": "f05405569712046n",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "vehicules-de-societe-hd",
+    "formId": "i33216978458662p",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "assurance-estheticienne-institut-beaute",
+    "formId": "g71650982594340a",
+    "gtm": "GTM-53SH7D7F",
+    "micro": "reponse_3"
+  },
+  {
+    "site": "assurance-estheticiennes-instituts-beaute-v1",
+    "formId": "f07610880923305b",
+    "gtm": "GTM-53SH7D7F",
+    "micro": "reponse_3"
+  },
+  {
+    "site": "assurance-iard-v2",
+    "formId": "f21802735560905j",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "tns-prevoyance-v2",
+    "formId": "g40565753835715p",
+    "gtm": "GTM-WMVZJKS",
+    "micro": "reponse_3"
+  },
+  {
+    "site": "celebrez-le-noel-des-salaries-avec-kadeos",
+    "formId": "d03416996748972f",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "ecomobility",
+    "formId": "n44127141758206n",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "edenred-ticket-restaurant-juillet-v1",
+    "formId": "n70723156021219n",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "geolocalisation-de-flotte",
+    "formId": "i42546920674381g",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "nissan-ariya",
+    "formId": "d00367735154396o",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "still-manutention",
+    "formId": "b39307910906097e",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "suivi-de-vehicules",
+    "formId": "b73672463744974c",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "ticket-restaurant",
+    "formId": "b90659570336505f",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "ticket-restaurant-",
+    "formId": "i21422427580793d",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "ticket-restaurant-septembre",
+    "formId": "i08328878068415k",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "ticket-restaurant-septembre-btp",
+    "formId": "p94073864731443e",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "typ-formulaires-typ-caisses-enregistreuse",
+    "formId": "n68269150536662k",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "typ-formulaires-typ-energie-form",
+    "formId": "h08063733257525d",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "une-rentree-sous-le-signe-du-pouvoir-d-achat",
+    "formId": "h09054651109041c",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "fiat-pro",
+    "formId": "l84466859996481o",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "mercedes-benz-mercedes-benz-evito",
+    "formId": "d00050719290315j",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "mercedes-benz-nouvel-ecitan-fourgon",
+    "formId": "i46769020452195o",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "mercedes-benz-sprinter",
+    "formId": "l46331774107173l",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "nissan-juke",
+    "formId": "j69352473321047m",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  },
+  {
+    "site": "too-good-to-go",
+    "formId": "c24304270166924k",
+    "gtm": "GTM-53SH7D7F",
+    "micro": ""
+  }
+]

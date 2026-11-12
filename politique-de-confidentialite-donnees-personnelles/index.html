@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — HelloLead</title>
+<meta name="description" content="Politique de confidentialité et de protection des données personnelles de HelloLead et ComparateurPro (Hellodevis) : données collectées, finalités, conservation et droits RGPD.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234276BB'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='bold' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#101828;
+    --ink-2:#344054;
+    --body:#475467;
+    --muted:#667085;
+    --line:#E4E7EC;
+    --line-2:#D0D5DD;
+    --soft:#F9FAFB;
+    --brand:#4276BB;
+    --brand-dk:#2F5C99;
+    --accent:#E79950;
+    --maxw:1080px;
+    --prose:70ch;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  body{
+    margin:0; background:#fff; color:var(--body);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:16.5px; line-height:1.72; -webkit-font-smoothing:antialiased;
+  }
+  img{display:block; max-width:100%}
+  a{color:var(--brand-dk); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px}
+  a:hover{color:#23446F}
+  p{margin:0 0 1.05em}
+  strong{color:var(--ink); font-weight:600}
+  h1,h2,h3{color:var(--ink); font-weight:650; letter-spacing:-.012em}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+  .skip{position:absolute; left:-9999px}
+  .skip:focus{left:16px; top:12px; background:#fff; padding:10px 14px; border:1px solid var(--line-2); border-radius:6px; z-index:99}
+  :focus-visible{outline:2px solid var(--brand); outline-offset:3px; border-radius:3px}
+
+  /* ---------- En-tête ---------- */
+  .top{border-bottom:1px solid var(--line); background:#fff}
+  .top-inner{display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:68px}
+  .logo{display:flex; align-items:center; gap:14px; text-decoration:none}
+  .logo img{height:24px; width:auto}
+  .logo span{font-size:13px; color:var(--muted); padding-left:14px; border-left:1px solid var(--line); line-height:1.2}
+  .top nav{display:flex; align-items:center; gap:26px; font-size:14.5px}
+  .top nav a{color:var(--ink-2); text-decoration:none}
+  .top nav a:hover{color:var(--brand-dk); text-decoration:underline}
+  .top nav a.is-btn{border:1px solid var(--line-2); border-radius:6px; padding:8px 14px; font-weight:500; color:var(--ink)}
+  .top nav a.is-btn:hover{border-color:var(--ink-2); text-decoration:none; background:var(--soft)}
+
+  /* ---------- Titre ---------- */
+  .head{padding:56px 0 0}
+  .eyebrow{font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 14px}
+  h1{font-size:clamp(1.85rem,3.4vw,2.6rem); line-height:1.16; margin:0 0 18px; max-width:24ch}
+  .deck{font-size:1.03rem; line-height:1.65; color:var(--ink-2); max-width:var(--prose); margin:0}
+  .facts{
+    display:flex; flex-wrap:wrap; gap:8px 28px; margin:30px 0 0;
+    padding:16px 0 0; border-top:1px solid var(--line);
+    font-size:13.5px; color:var(--muted);
+  }
+  .facts b{color:var(--ink-2); font-weight:600}
+
+  /* ---------- Corps ---------- */
+  .doc{display:grid; grid-template-columns:230px minmax(0,1fr); gap:64px; padding:44px 0 72px; align-items:start}
+
+  .toc{position:sticky; top:32px}
+  .toc p{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 12px}
+  .toc ol{list-style:none; margin:0; padding:0; border-left:1px solid var(--line)}
+  .toc li{margin:0}
+  .toc a{
+    display:block; padding:6px 0 6px 14px; margin-left:-1px;
+    border-left:2px solid transparent;
+    font-size:14px; line-height:1.4; color:var(--ink-2); text-decoration:none;
+  }
+  .toc a:hover{color:var(--ink); border-left-color:var(--line-2)}
+  .toc a.is-active{color:var(--brand-dk); border-left-color:var(--brand); font-weight:600}
+  .toc .aside{margin-top:22px; padding-top:16px; border-top:1px solid var(--line); font-size:13.5px}
+  .toc .aside a{display:block; padding:4px 0; color:var(--muted); text-decoration:none}
+  .toc .aside a:hover{color:var(--brand-dk); text-decoration:underline}
+
+  main{min-width:0; max-width:var(--prose)}
+  section{margin:0 0 52px; scroll-margin-top:28px}
+  section:last-of-type{margin-bottom:0}
+  .sec-head{display:flex; align-items:baseline; gap:14px; margin:0 0 22px; padding-bottom:12px; border-bottom:1px solid var(--line)}
+  .sec-n{font-size:12.5px; font-weight:600; color:var(--brand); letter-spacing:.06em; flex:none; font-variant-numeric:tabular-nums}
+  h2{font-size:1.44rem; line-height:1.3; margin:0}
+  h3{font-size:1.02rem; margin:32px 0 10px}
+  h3:first-of-type{margin-top:0}
+  .lead{color:var(--ink-2)}
+  .small{font-size:14.5px; color:var(--muted)}
+
+  /* données sous forme de fiche */
+  .fiche{margin:26px 0 0}
+  .fiche div{display:grid; grid-template-columns:170px 1fr; gap:8px 20px; padding:9px 0; border-top:1px solid var(--line); font-size:15px}
+  .fiche div:first-child{border-top:0; padding-top:0}
+  .fiche dt{color:var(--muted); margin:0}
+  .fiche dd{margin:0; color:var(--ink); font-weight:500}
+
+  /* base légale */
+  .base{
+    display:block; margin:0 0 12px; font-size:12.5px; letter-spacing:.04em;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+  }
+  .base b{color:var(--brand); font-weight:600}
+  .finalite{padding:22px 0; border-top:1px solid var(--line)}
+  .finalite:last-child{border-bottom:1px solid var(--line)}
+  .finalite h3{margin:0 0 10px}
+  .finalite p:last-child{margin-bottom:0}
+
+  /* listes */
+  ul.plain{margin:0 0 1.05em; padding-left:1.15em}
+  ul.plain li{margin:0 0 .45em}
+  ol.steps{margin:20px 0 0; padding:0; list-style:none; counter-reset:st}
+  ol.steps li{
+    position:relative; padding:0 0 14px 34px; counter-increment:st; font-size:15.5px;
+  }
+  ol.steps li::before{
+    content:counter(st); position:absolute; left:0; top:1px;
+    width:22px; height:22px; border-radius:50%; border:1px solid var(--line-2);
+    font-size:12px; font-weight:600; color:var(--ink-2);
+    display:grid; place-items:center; background:#fff;
+  }
+  ol.steps li:last-child{padding-bottom:0}
+
+  /* encadré discret */
+  .note{border-left:3px solid var(--line-2); padding:2px 0 2px 16px; margin:22px 0; font-size:15px; color:var(--ink-2)}
+  .note.warn{border-left-color:var(--accent)}
+  .note p:last-child{margin-bottom:0}
+  .box{background:var(--soft); border:1px solid var(--line); border-radius:8px; padding:22px 24px; margin:22px 0}
+  .box > :last-child{margin-bottom:0}
+  .box h3{margin-top:0}
+
+  /* conservation */
+  .durees{list-style:none; margin:22px 0 0; padding:0; border-top:1px solid var(--line)}
+  .durees li{display:grid; grid-template-columns:150px 1fr; gap:6px 24px; padding:14px 0; border-bottom:1px solid var(--line); font-size:15.5px}
+  .durees span{color:var(--muted); font-size:13.5px; letter-spacing:.03em; text-transform:uppercase; font-weight:600; padding-top:2px}
+
+  /* droits */
+  .droits{margin:20px 0 0; border-top:1px solid var(--line)}
+  .droits div{display:grid; grid-template-columns:190px 1fr; gap:6px 24px; padding:14px 0; border-bottom:1px solid var(--line); font-size:15.5px}
+  .droits dt{color:var(--ink); font-weight:600}
+  .droits dd{margin:0}
+
+  /* prospection */
+  .prosp{border:1px solid var(--line); border-radius:8px; padding:24px; margin:20px 0; background:#fff}
+  .prosp header{display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin:0 0 12px; padding-bottom:12px; border-bottom:1px solid var(--line)}
+  .prosp h3{margin:0}
+  .prosp .tag{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-weight:600; flex:none}
+  .prosp p:last-child{margin-bottom:0}
+  .prosp .ref{display:block; font-size:13.5px; color:var(--muted); margin-top:12px}
+
+  /* contact */
+  .contact{margin:20px 0 0}
+  .contact div{display:grid; grid-template-columns:190px 1fr; gap:6px 24px; padding:12px 0; border-top:1px solid var(--line); font-size:15.5px}
+  .contact dt{color:var(--muted)}
+  .contact dd{margin:0}
+  .contact a{color:var(--brand-dk)}
+
+  .endnote{
+    margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px;
+    font-size:13.5px; color:var(--muted);
+  }
+  .endnote a{color:var(--muted)}
+
+  /* ---------- Pied de page ---------- */
+  .foot{border-top:1px solid var(--line); background:var(--soft); padding:32px 0}
+  .foot-inner{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px}
+  .foot img{height:20px; width:auto; opacity:.9}
+  .foot nav{display:flex; flex-wrap:wrap; gap:20px; font-size:13.5px}
+  .foot nav a{color:var(--ink-2); text-decoration:none}
+  .foot nav a:hover{color:var(--brand-dk); text-decoration:underline}
+  .foot .legal{width:100%; font-size:12.5px; color:var(--muted); margin-top:6px}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .doc{grid-template-columns:1fr; gap:32px; padding-top:32px}
+    .toc{position:static}
+    .toc ol{columns:2; column-gap:24px; border-left:0}
+    .toc a{border-left:0; padding-left:0; border-bottom:1px solid var(--line)}
+    .toc a.is-active{border-left:0}
+    main{max-width:none}
+    .logo span{display:none}
+    .top nav a:not(.is-btn){display:none}
+  }
+  @media (max-width:620px){
+    body{font-size:16px}
+    .head{padding-top:34px}
+    h1{max-width:none}
+    .toc ol{columns:1}
+    .fiche div,.durees li,.droits div,.contact div{grid-template-columns:1fr; gap:2px}
+    .droits div,.durees li{padding:12px 0}
+    .prosp{padding:18px}
+    .prosp header{flex-direction:column; gap:4px; align-items:flex-start}
+  }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+  @media print{
+    .top,.toc,.endnote,.foot{display:none!important}
+    .doc{display:block; padding:0}
+    body{font-size:10.5pt; line-height:1.5}
+    main{max-width:none}
+    a{color:#000; text-decoration:none}
+    section{page-break-inside:auto}
+    h2{page-break-after:avoid}
+    .box,.prosp,.note{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="logo" href="https://www.hellolead.pro/">
+      <img src="data:image/png;base64,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" alt="HelloLead">
+      <span>Informations légales</span>
+    </a>
+    <nav aria-label="Navigation">
+      <a href="https://www.hellolead.pro/mentions-legales/">Mentions légales</a>
+      <a href="#sommaire">Sommaire</a>
+      <a class="is-btn" href="mailto:contact@hellolead.pro">Nous écrire</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="head">
+    <p class="eyebrow">Données personnelles</p>
+    <h1>Politique de confidentialité</h1>
+    <p class="deck">
+      En application du règlement (UE) n° 2016/679, dit Règlement général sur la protection des données
+      (RGPD), nous publions ci-dessous les informations relatives à la collecte, au traitement, à la finalité
+      et à la conservation des données personnelles.
+    </p>
+    <div class="facts">
+      <span>Mise à jour <b>novembre 2026</b></span>
+      <span>Responsable des traitements <b>Pierre Bénateau</b></span>
+      <span>Éditeur <b>Hellodevis — RCS Paris B 798 043 634</b></span>
+    </div>
+  </div>
+
+  <div class="doc" id="sommaire">
+    <aside class="toc" aria-label="Sommaire">
+      <p>Sommaire</p>
+      <ol>
+        <li><a href="#qui-sommes-nous">Qui sommes-nous&nbsp;?</a></li>
+        <li><a href="#nos-actions">Quelles sont nos actions&nbsp;?</a></li>
+        <li><a href="#donnees">Quelles données collectons-nous&nbsp;?</a></li>
+        <li><a href="#utilisation">Comment utilisons-nous les données&nbsp;?</a></li>
+        <li><a href="#conservation">Conservation des données</a></li>
+        <li><a href="#droits">Les droits de l'Utilisateur</a></li>
+        <li><a href="#prospection">Prospection téléphonique</a></li>
+        <li><a href="#contact">Nous contacter</a></li>
+        <li><a href="#modifications">Modifications</a></li>
+      </ol>
+      <div class="aside">
+        <a href="https://www.hellolead.pro/desinscription/">Formulaire de désinscription</a>
+        <a href="https://www.hellolead.pro/mentions-legales/">Mentions légales</a>
+      </div>
+    </aside>
+
+    <main id="contenu">
+
+      <section id="qui-sommes-nous">
+        <div class="sec-head"><span class="sec-n">01</span><h2>Qui sommes-nous&nbsp;?</h2></div>
+        <p>
+          <strong>ComparateurPro</strong> et <strong>HelloLead</strong> sont des marques de la société
+          <strong>Hellodevis</strong>, dont le siège social est situé au 5 avenue de la République, 75011 Paris,
+          et immatriculée au Registre du commerce et des sociétés de Paris sous le numéro B 798 043 634.
+        </p>
+        <dl class="fiche">
+          <div><dt>Société</dt><dd>Hellodevis, SAS au capital de 30 000 €</dd></div>
+          <div><dt>Marques</dt><dd>ComparateurPro et HelloLead</dd></div>
+          <div><dt>Siège social</dt><dd>5 avenue de la République, 75011 Paris</dd></div>
+          <div><dt>Immatriculation</dt><dd>RCS Paris — B 798 043 634</dd></div>
+          <div><dt>Téléphone</dt><dd>07 56 98 60 82</dd></div>
+        </dl>
+      </section>
+
+      <section id="nos-actions">
+        <div class="sec-head"><span class="sec-n">02</span><h2>Quelles sont nos actions&nbsp;?</h2></div>
+        <h3>Solliciter des demandes de devis ou des informations</h3>
+        <p>
+          Dans le cadre de notre activité et dans la finalité de servir nos clients, nous sollicitons des demandes
+          de devis ou des informations concernant un produit ou un service proposé ou sélectionné.
+        </p>
+        <p>
+          Notre métier consiste à mettre en relation des personnes cherchant à acheter un produit ou un service
+          (ci-après l'«&nbsp;<strong>Utilisateur</strong>&nbsp;») avec un ou plusieurs fournisseurs de ce produit
+          ou de ce service (ci-après le «&nbsp;<strong>Fournisseur</strong>&nbsp;»). Les Fournisseurs sont les
+          clients de Hellodevis. À cette fin, les personnes ayant un projet ou une intention d'achat se voient
+          proposer de renseigner un formulaire dans lequel un certain nombre d'informations leur sont demandées.
+        </p>
+        <p>
+          Une fois le formulaire validé, nous transmettons les informations recueillies au Fournisseur afin qu'il
+          puisse exercer son activité commerciale. Nous communiquons alors l'identité de l'Utilisateur ainsi que
+          certaines informations concernant le produit ou le service souhaité. Le formulaire en ligne intègre
+          toujours une déclaration de consentement très explicite.
+        </p>
+        <p>
+          Pour certains produits ou services, nous sommes susceptibles de contacter l'Utilisateur par téléphone
+          afin de confirmer ses coordonnées ou ses exigences avant de le mettre en relation avec un Fournisseur.
+        </p>
+        <p>
+          La mise en relation se fait avec le Fournisseur sans que l'Utilisateur ne soit soumis à aucune obligation
+          d'achat.
+        </p>
+
+        <div class="note"><p>Le parcours est simple&nbsp;: vous renseignez le formulaire et consentez à la mise en relation, nous qualifions votre demande et la transmettons aux Fournisseurs concernés, puis le Fournisseur vous contacte directement — sans aucun engagement de votre part.</p></div>
+      </section>
+
+      <section id="donnees">
+        <div class="sec-head"><span class="sec-n">03</span><h2>Quelles données collectons-nous&nbsp;?</h2></div>
+
+        <h3>Coordonnées et informations liées aux produits ou aux services</h3>
+        <p>
+          Lors du renseignement du formulaire, les informations demandées sont la civilité, le prénom, le nom, le
+          numéro de téléphone (sur lequel le Fournisseur pourra rappeler pour faire sa proposition), l'adresse
+          électronique (sur laquelle le Fournisseur pourra écrire pour faire sa proposition) et l'adresse postale
+          (afin de proposer à l'Utilisateur un Fournisseur desservant sa zone géographique).
+        </p>
+        <p>
+          Il sera également demandé de préciser, sur le formulaire en ligne, les exigences relatives aux produits
+          ou aux services recherchés.
+        </p>
+        <p>
+          Dans le respect du périmètre évoqué ci-dessus, les formulaires sont susceptibles d'évoluer pour s'adapter
+          aux intérêts des Utilisateurs ainsi qu'aux critères demandés par les Fournisseurs. Le formulaire en ligne
+          indique toujours clairement les informations requises et se limite aux informations pertinentes pour la
+          demande de mise en relation.
+        </p>
+        <p>
+          Dans un souci de démarche qualité, il est possible que l'Utilisateur soit rappelé afin de lui demander
+          quelques précisions ou informations complémentaires utiles à la pertinence de la mise en relation.
+        </p>
+
+        <h3>Adresses IP</h3>
+        <p>
+          Nous enregistrons et partageons également les adresses IP (Internet Protocol), tel qu'expliqué ci-dessous.
+          Chaque ordinateur ou appareil dispose d'une adresse IP&nbsp;: il s'agit d'un numéro unique qui lui permet
+          de communiquer avec d'autres ordinateurs et appareils via Internet.
+        </p>
+        <p>
+          Nous conservons les adresses IP pour bloquer les spams sur notre site. Par exemple, si nous constatons
+          qu'un spam provient d'une adresse IP spécifique (en étant liée à un ordinateur ou à un lieu), nous pouvons
+          bloquer cette adresse. De même, nous pouvons ponctuellement communiquer des adresses IP aux Prestataires
+          de services afin de leur permettre de vérifier que les demandes de devis proviennent d'un pays spécifique.
+        </p>
+
+        <h3>Enregistrement des appels</h3>
+        <p>
+          Nous sommes susceptibles d'écouter et/ou d'enregistrer des appels à des fins de contrôle de la qualité et
+          de formation du personnel. De même, nous pouvons ponctuellement avoir besoin d'accorder aux Prestataires
+          de services un accès limité à ces enregistrements afin de résoudre des litiges.
+        </p>
+
+        <h3>Cookies</h3>
+        <p>
+          Les cookies sont de petits fichiers texte enregistrés sur votre ordinateur par les sites web consultés.
+          Ils sont largement utilisés pour faciliter ou améliorer le fonctionnement des sites web, ainsi que pour
+          fournir des informations aux propriétaires de ces sites.
+        </p>
+        <p>
+          En ajustant les paramètres de la plupart des navigateurs web, l'Utilisateur a la possibilité de contrôler
+          la majorité des cookies. Pour en savoir plus sur les cookies et notamment pour savoir quels cookies ont
+          été enregistrés sur l'appareil et comment les gérer et les supprimer, il est possible de consulter les
+          sites suivants&nbsp;: <a href="https://www.aboutcookies.org" rel="noopener nofollow">aboutcookies.org</a>
+          ou <a href="https://www.allaboutcookies.org" rel="noopener nofollow">allaboutcookies.org</a>.
+        </p>
+        <p>
+          Pour empêcher Google Analytics de suivre votre comportement sur Internet, rendez-vous sur la page
+          suivante&nbsp;: <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener nofollow">tools.google.com/dlpage/gaoptout</a>.
+        </p>
+      </section>
+
+      <section id="utilisation">
+        <div class="sec-head"><span class="sec-n">04</span><h2>Comment utilisons-nous les données&nbsp;?</h2></div>
+        <p>
+          Nous utilisons les données (telles que décrites ci-dessus) aux fins suivantes. Pour chaque finalité, la
+          base juridique applicable au sens du RGPD est précisée.
+        </p>
+
+        <div class="finalite">
+          <span class="base">Base légale&nbsp;: <b>consentement</b></span>
+          <h3>Mettre en relation l'Utilisateur avec des Fournisseurs de produits ou de services pertinents</h3>
+          <p>
+            Comme évoqué plus haut, une fois le formulaire renseigné, la demande est transmise à un ou plusieurs
+            Fournisseurs de produits ou de services pertinents. Nous procédons de façon sécurisée, en utilisant le
+            protocole HTTPS, qui permet de chiffrer les données. Les Fournisseurs contactent ensuite directement les
+            Utilisateurs pour leur présenter leurs solutions. Ils sont susceptibles de les contacter par téléphone,
+            par SMS ou par courrier électronique.
+          </p>
+          <span class="base">Base légale&nbsp;: <b>intérêt légitime</b></span>
+          <p>
+            Avant de transmettre la demande à un Fournisseur, un processus de prise de décision automatique sera
+            éventuellement enclenché dans le cadre de notre prestation. Notre plateforme technologique pourra
+            évaluer les exigences relatives au produit ou au service en fonction des informations renseignées et
+            transmettre automatiquement la demande au(x) Fournisseur(s) apte(s) à la traiter, aussi bien sur la base
+            de critères techniques liés au produit ou au service que de critères géographiques ou de disponibilité
+            dans l'instant.
+          </p>
+          <p>
+            Si un Fournisseur souhaite transmettre les données à des agences de vérification de crédit tierces dans
+            le cadre d'une demande de produits financiers spécifiques, l'information sera présente dans la
+            déclaration de consentement.
+          </p>
+        </div>
+
+        <div class="finalite">
+          <span class="base">Base légale&nbsp;: <b>consentement</b></span>
+          <h3>Un contact téléphonique afin de confirmer les coordonnées et/ou les exigences</h3>
+          <p>
+            Pour certains produits ou services, nous sommes susceptibles de contacter l'Utilisateur par téléphone
+            afin de confirmer ses coordonnées ou ses exigences avant de le mettre en relation avec un Fournisseur.
+          </p>
+          <p>
+            Nous pouvons également contacter l'Utilisateur par téléphone pour recueillir ses retours sur
+            l'utilisation de notre service, et sur la façon dont se sont déroulés les échanges avec le ou les
+            Fournisseur(s) avec le(s)quel(s) nous l'avons mis en relation.
+          </p>
+        </div>
+
+        <div class="finalite">
+          <span class="base">Base légale&nbsp;: <b>consentement</b></span>
+          <h3>Convenir d'un rendez-vous</h3>
+          <p>
+            Si le formulaire propose une prise de rendez-vous, nous sommes là également susceptibles de prendre
+            contact par téléphone, soit en notre nom propre, soit au nom du Fournisseur, pour fixer ou confirmer un
+            rendez-vous.
+          </p>
+          <p>
+            S'il a été convenu d'un rendez-vous, nous transmettons au Fournisseur les coordonnées recueillies, ainsi
+            que les informations que vous nous aurez collectées durant la conversation téléphonique et qui sont
+            destinées à la pertinence de la mise en relation. Nous indiquons également avec quel Fournisseur le
+            rendez-vous a été pris. Aucun rendez-vous n'est validé sans l'accord de l'Utilisateur.
+          </p>
+        </div>
+
+        <div class="finalite">
+          <span class="base">Base légale&nbsp;: <b>intérêt légitime</b></span>
+          <h3>Créer des audiences personnalisées et similaires</h3>
+          <p>
+            Nous travaillons régulièrement avec Facebook, Instagram, Google, TikTok, LinkedIn et d'autres
+            plateformes (ci-après les «&nbsp;<strong>Plateformes</strong>&nbsp;») afin de publier des publicités. La
+            démarche consiste à contacter d'autres Utilisateurs susceptibles d'être intéressés par l'utilisation de
+            notre service de demande de devis.
+          </p>
+          <p>
+            Les données, ainsi que d'autres informations, sont utilisées pour créer une audience similaire.
+            Lorsqu'une audience est partagée avec une Plateforme, les données sont d'abord hachées et enregistrées
+            de façon pseudonyme, ce qui signifie que les données qui pourraient permettre d'identifier une personne
+            au sein d'une audience sont remplacées par un identifiant artificiel. Ce processus est donc sécurisé.
+            Par ailleurs, nous partageons uniquement la quantité de données strictement nécessaire à la création de
+            l'audience en question.
+          </p>
+          <p>
+            Une audience similaire est une audience créée par la Plateforme. Il nous arrive de communiquer des
+            listes d'Utilisateurs existants aux Plateformes. La Plateforme utilise cette liste pour trouver et créer
+            des profils similaires, à savoir d'autres utilisateurs de la Plateforme présentant des caractéristiques
+            semblables aux Utilisateurs existants, auxquels elle présente nos publicités. Comme nous l'avons
+            expliqué ci-dessus, ces données, avant d'être transmises à la Plateforme, sont d'abord hachées puis
+            enregistrées de façon pseudonyme.
+          </p>
+          <p>
+            Comme nous l'expliquons ci-dessous, l'Utilisateur a la possibilité de s'opposer à tout moment à ce type
+            d'activité en nous envoyant un courrier électronique à l'adresse suivante&nbsp;:
+            <a href="mailto:dpo@comparateurpro.fr">dpo@comparateurpro.fr</a>.
+          </p>
+        </div>
+
+        <div class="finalite">
+          <span class="base">Base légale&nbsp;: <b>intérêt légitime</b></span>
+          <h3>Vérifier l'authenticité de l'envoi de votre formulaire en ligne</h3>
+          <p>
+            Nous travaillons à l'occasion avec un prestataire tiers, Twilio, afin de valider que le formulaire ne
+            soit pas renseigné par un robot et que le numéro de téléphone transmis par l'Utilisateur soit valide.
+          </p>
+          <p>
+            Le principe est simple. Avant que le formulaire ne soit définitivement validé, l'Utilisateur reçoit sur
+            son téléphone mobile (numéro qu'il vient de renseigner dans le formulaire) un code qu'il doit encore
+            renseigner sur le formulaire. C'est la garantie qu'il est un humain et que le numéro de téléphone qu'il
+            a renseigné est valide.
+          </p>
+          <p>
+            Twilio ne reçoit de notre part que le numéro de mobile de l'Utilisateur. D'une part, en tant
+            qu'intermédiaire, Twilio s'engage à ne pas utiliser ces données&nbsp;; d'autre part, ces données sont
+            transmises de façon anonymisées. «&nbsp;Anonymisées&nbsp;» signifie qu'elles ne permettent pas
+            d'établir l'identité dans le monde réel.
+          </p>
+          <p>
+            L'Utilisateur peut refuser à ce que ces données soient transmises à Twilio. Il peut nous écrire à
+            <a href="mailto:dpo@comparateurpro.fr">dpo@comparateurpro.fr</a>. Plus d'informations sur Twilio&nbsp;:
+            <a href="https://www.twilio.com/legal/privacy" rel="noopener nofollow">twilio.com/legal/privacy</a>.
+          </p>
+        </div>
+
+        <div class="finalite">
+          <span class="base">Base légale&nbsp;: <b>intérêt légitime</b></span>
+          <h3>Lorsque nous recevons des données de la part des Fournisseurs</h3>
+          <p>
+            Les Fournisseurs sont susceptibles de nous renvoyer des données de façon ponctuelle. Cela peut se
+            produire lorsqu'ils ont des questions concernant une demande de devis ou de renseignements que nous leur
+            avons transmise, afin que nous puissions répondre à leur demande. Ils peuvent également nous envoyer des
+            données accompagnées d'une confirmation concernant ce qui a été acheté ou non, afin de nous aider à
+            améliorer nos opérations de marketing. Il est également possible que nous utilisions ces données afin de
+            créer des audiences similaires, comme évoqué plus haut.
+          </p>
+        </div>
+      </section>
+
+      <section id="conservation">
+        <div class="sec-head"><span class="sec-n">05</span><h2>Enregistrement et conservation des données</h2></div>
+        <p>
+          Les données personnelles sont conservées dans un centre d'hébergement sécurisé situé en France à l'adresse
+          suivante&nbsp;:
+        </p>
+        <div class="box">
+          <p><strong>OVH</strong><br>
+          ZI Les Huttes, route de la Ferme Masson<br>
+          59820 Gravelines<br>
+          Tél. 03 20 19 20 00 — <a href="https://www.ovhcloud.com" rel="noopener nofollow">www.ovhcloud.com</a></p>
+        </div>
+        <p>
+          Elles sont protégées dans le centre d'hébergement par les systèmes de sécurité physique et informatique
+          que nous jugeons adéquats, et notamment des procédures d'accès physique aux serveurs par un nombre
+          restreint de nos employés, ainsi que des protections informatiques par mots de passe et pare-feu.
+        </p>
+        <p>
+          En tout état de cause, nos sous-traitants sont également tenus à des mesures de protection adéquates pour
+          vos données personnelles, qui ne sont pas exportées en dehors de l'Union européenne.
+        </p>
+        <p>
+          Nous avons mis en place une politique en matière de conservation des données qui énonce clairement la
+          durée et le motif de leur conservation. Nous conservons les données uniquement le temps nécessaire à
+          l'accomplissement du ou des objectifs poursuivis lors de leur collecte, conformément à ce que prévoit la
+          présente politique de confidentialité.
+        </p>
+        <ul class="durees">
+          <li><span>6 mois</span><div>Conservation des demandes de devis à compter de la date à laquelle la demande a été émise, afin de pouvoir répondre aux potentielles requêtes des Fournisseurs.</div></li>
+          <li><span>Anonymisation</span><div>Après cette période, nous n'utilisons plus ces données&nbsp;: nous les hachons et les rendons anonymes.</div></li>
+          <li><span>3 ans</span><div>Les données anonymisées sont conservées 3 ans à des fins de conformité.</div></li>
+        </ul>
+      </section>
+
+      <section id="droits">
+        <div class="sec-head"><span class="sec-n">06</span><h2>Les droits de l'Utilisateur</h2></div>
+        <p>
+          Les droits sont déterminés par le pays de résidence. Si vous résidez dans l'Espace économique européen,
+          vous disposez de droits sur vos données à caractère personnel en vertu du RGPD. Voici une explication plus
+          approfondie de ces droits, ainsi que des autres droits.
+        </p>
+        <dl class="droits">
+          <div><dt>Droit d'accès</dt><dd>L'Utilisateur a le droit, à tout moment, de nous demander une copie des données à caractère personnel que nous détenons à son sujet et de vérifier que nous les traitons de façon conforme.</dd></div>
+          <div><dt>Droit de rectification</dt><dd>Si les données à caractère personnel que nous détenons à son sujet ne sont pas exactes ou ne sont plus à jour et nécessitent une modification ou une correction, l'Utilisateur est en droit de les faire rectifier ou compléter.</dd></div>
+          <div><dt>Droit à l'effacement</dt><dd>Dans certaines circonstances, l'Utilisateur est en droit d'exiger que les données à caractère personnel que nous détenons à son sujet soient effacées (par exemple, si les informations ne sont plus nécessaires au regard des finalités pour lesquelles elles ont été recueillies ou traitées).</dd></div>
+          <div><dt>Droit d'opposition et à la limitation du traitement</dt><dd>Dans certaines circonstances, l'Utilisateur est en droit de s'opposer à notre traitement de ses données à caractère personnel. Par exemple, si nous traitons des informations sur la base de notre intérêt légitime et qu'aucun motif légitime et impérieux justifiant notre traitement ne prévaut sur ses droits et intérêts.</dd></div>
+          <div><dt>Droit à la portabilité des données</dt><dd>Dans certains cas, l'Utilisateur dispose du droit de recevoir les données à caractère personnel que nous détenons à son sujet, dans un format structuré, couramment utilisé et lisible par machine.</dd></div>
+          <div><dt>Droit au retrait du consentement</dt><dd>Dans les cas où l'Utilisateur a consenti au recueil, au traitement et au transfert de ses données à caractère personnel pour une finalité spécifique, l'Utilisateur est en droit de retirer son consentement vis-à-vis de ce traitement spécifique à tout moment.</dd></div>
+        </dl>
+
+        <h3>Exercer ses droits</h3>
+        <p>
+          Si l'Utilisateur désire simplement ne plus recevoir de mail de notre part, un
+          <a href="https://www.hellolead.pro/desinscription/">formulaire de désinscription</a> est à sa disposition.
+        </p>
+        <p>
+          Si l'Utilisateur souhaite exercer l'un quelconque des droits qui lui sont conférés en vertu du RGPD ou
+          s'il souhaite en savoir plus sur notre utilisation de ses données, nous lui proposons de nous envoyer un
+          courrier électronique à l'adresse suivante&nbsp;:
+          <a href="mailto:dpo@comparateurpro.fr">dpo@comparateurpro.fr</a>.
+        </p>
+        <p>
+          Toute demande doit comporter un maximum d'informations (notamment l'entreprise, la marque ou le service
+          concerné par la demande), afin qu'elle puisse être traitée à réception dans un délai maximal d'un mois
+          (sauf exceptions)&nbsp;: par exemple, les personnes doivent préciser l'adresse électronique sollicitée et
+          pour laquelle elles adressent la demande afin de faciliter les recherches.
+        </p>
+        <p>
+          Responsable des traitements de données personnelles&nbsp;: <strong>Pierre Bénateau</strong>.
+        </p>
+        <p>
+          L'Utilisateur peut aussi s'adresser à l'autorité de contrôle des données personnelles, la Commission
+          nationale de l'informatique et des libertés (CNIL), 3 place de Fontenoy – TSA 80715 – 75334 Paris
+          Cedex 07.
+        </p>
+      </section>
+
+      <section id="prospection">
+        <div class="sec-head"><span class="sec-n">07</span><h2>Prospection téléphonique</h2></div>
+
+        <div class="prosp">
+          <header>
+            <h3>Prospection téléphonique B2C</h3>
+            <span class="tag">Consommateur</span>
+          </header>
+          <p>
+            Conformément aux articles L.&nbsp;223-1 et suivants du Code de la consommation, tout consommateur
+            bénéficie d'une protection contre le démarchage téléphonique non sollicité. Depuis le 11 août 2026, le
+            démarchage téléphonique à des fins commerciales est soumis, sauf exceptions légales, au consentement
+            préalable du consommateur, qui peut être retiré à tout moment.
+          </p>
+          <span class="ref">Articles L. 223-1 et suivants du Code de la consommation.</span>
+        </div>
+
+        <div class="prosp">
+          <header>
+            <h3>Prospection téléphonique B2B</h3>
+            <span class="tag">Professionnel</span>
+          </header>
+          <p>
+            Dans le cadre de leurs activités professionnelles, les utilisateurs du site sont informés que leurs
+            coordonnées téléphoniques professionnelles peuvent être utilisées à des fins de prospection commerciale,
+            sous réserve du respect de la réglementation applicable, notamment du Règlement général sur la
+            protection des données (RGPD). Conformément à l'article 21 du RGPD, ils disposent du droit de s'opposer
+            à tout moment, gratuitement et sans justification, à l'utilisation de leurs coordonnées à des fins de
+            prospection commerciale.
+          </p>
+          <span class="ref">Article 21 du RGPD — droit d'opposition.</span>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="sec-head"><span class="sec-n">08</span><h2>Nous contacter</h2></div>
+        <p>
+          Pour toute question sur la présente politique de confidentialité ou la protection et la confidentialité
+          des données, il est possible de nous contacter aux adresses suivantes&nbsp;:
+        </p>
+        <dl class="contact">
+          <div><dt>Données personnelles</dt><dd><a href="mailto:dpo@comparateurpro.fr">dpo@comparateurpro.fr</a></dd></div>
+          <div><dt>Contact général</dt><dd><a href="mailto:contact@hellolead.pro">contact@hellolead.pro</a></dd></div>
+          <div><dt>Courrier</dt><dd>Hellodevis, 5 avenue de la République, 75011 Paris</dd></div>
+          <div><dt>Téléphone</dt><dd>07 56 98 60 82</dd></div>
+        </dl>
+      </section>
+
+      <section id="modifications">
+        <div class="sec-head"><span class="sec-n">09</span><h2>Modifications de la présente politique</h2></div>
+        <p>
+          Nous sommes susceptibles de modifier ponctuellement la présente politique de confidentialité. La présente
+          politique de confidentialité est notre version la plus récente et remplace toute version antérieure.
+        </p>
+        <div class="endnote">
+          <span>Dernière mise à jour&nbsp;: novembre 2026</span>
+          <a href="#sommaire">Revenir au sommaire</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <a href="https://www.hellolead.pro/"><img src="data:image/png;base64,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" alt="HelloLead"></a>
+    <nav aria-label="Liens de pied de page">
+      <a href="https://www.hellolead.pro/">Accueil</a>
+      <a href="https://www.hellolead.pro/mentions-legales/">Mentions légales</a>
+      <a href="https://www.hellolead.pro/politique-de-confidentialite-donnees-personnelles/">Politique de confidentialité</a>
+      <a href="https://www.hellolead.pro/desinscription/">Désinscription</a>
+      <a href="mailto:contact@hellolead.pro">contact@hellolead.pro</a>
+    </nav>
+    <p class="legal">© 2026 HelloLead — Tous droits réservés. ComparateurPro et HelloLead sont des marques de Hellodevis, SAS au capital de 30 000 € — RCS Paris B 798 043 634.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var targets = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  var queued = false;
+
+  function mark(id){
+    links.forEach(function(a){
+      var on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('is-active', on);
+      if (on){ a.setAttribute('aria-current','true'); } else { a.removeAttribute('aria-current'); }
+    });
+  }
+  function sync(){
+    queued = false;
+    var y = window.pageYOffset + 120, current = targets.length ? targets[0].id : null;
+    targets.forEach(function(t){ if (t.offsetTop <= y) current = t.id; });
+    if (window.pageYOffset + window.innerHeight >= document.documentElement.scrollHeight - 4){
+      current = targets[targets.length-1].id;
+    }
+    if (current) mark(current);
+  }
+  window.addEventListener('scroll', function(){
+    if (!queued){ queued = true; requestAnimationFrame(sync); }
+  }, {passive:true});
+  window.addEventListener('resize', sync);
+  if (targets.length) sync();
+})();
+</script>
+  <script src="mobile-ux.js" defer></script>
+</body>
+</html>
