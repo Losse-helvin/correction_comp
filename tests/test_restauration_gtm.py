@@ -9,7 +9,6 @@ sys.path.insert(0, str(ROOT / 'tools'))
 from audit_fonctionnalites import Page, active_gtm
 
 PAGES = {
-    'assurance-agriculteur-v2': 'GTM-53SH7D7F',
     'assurance-assurance-professionnelle-iard-v2': 'GTM-WMVZJKS',
     'assurance-protection-sociale-collective-v4': 'GTM-53SH7D7F',
     'assurances-multirisques-v2': 'GTM-WMVZJKS',
@@ -29,6 +28,26 @@ REFERENCE_PAGES = [
 ]
 
 PAGES_SANS_GTM = json.loads((ROOT / 'tests' / 'pages-sans-gtm.json').read_text(encoding='utf-8'))
+CONTENEURS = json.loads((ROOT / 'tests' / 'gtm-conteneurs.json').read_text(encoding='utf-8'))
+
+
+def html_pages():
+    return sorted(p for p in ROOT.rglob('*.html')
+                  if '.git' not in p.parts and 'node_modules' not in p.parts)
+
+
+def gtm_state(path):
+    """Conteneurs du chargeur, du noscript, et tous les ID présents dans le fichier."""
+    text = path.read_text(encoding='utf-8', errors='replace')
+    page = Page()
+    page.feed(text)
+    page.close()
+    noscript = sorted({m for src in page.iframes if 'googletagmanager.com/ns.html' in src
+                       for m in re.findall(r'GTM-[A-Z0-9]+', src)})
+    loaders = sum(1 for s in page.scripts
+                  if 'googletagmanager.com/gtm.js' in s['src'] + ' ' + s['text'])
+    return {'script': active_gtm(page.scripts), 'noscript': noscript, 'loaders': loaders,
+            'ids': sorted(set(re.findall(r'GTM-[A-Z0-9]+', text)))}
 
 
 class RestoredGtmTests(unittest.TestCase):
@@ -63,7 +82,7 @@ class RestoredGtmTests(unittest.TestCase):
                 self.assertEqual(html.count('https://www.googletagmanager.com/gtm.js'), 1)
 
     def test_pages_sans_gtm_sans_chargeur_ni_evenements(self):
-        self.assertEqual(len(PAGES_SANS_GTM), 21)
+        self.assertEqual(len(PAGES_SANS_GTM), 29)
         for site in PAGES_SANS_GTM:
             with self.subTest(site=site):
                 folder = ROOT / site
@@ -82,6 +101,67 @@ class RestoredGtmTests(unittest.TestCase):
                     self.assertNotIn('formulaire_micro_entrepreneur', code)
                 script = (folder / 'script.js').read_text(encoding='utf-8')
                 self.assertNotIn('cookie_preferences_updated', script)
+                # Certains gabarits poussaient la conversion depuis script.js,
+                # sans lead-handler.js : les deux fichiers doivent être propres.
+                for name in ('script.js', 'lead-handler.js', 'verification-sms.js'):
+                    module = folder / name
+                    if not module.exists():
+                        continue
+                    code = module.read_text(encoding='utf-8')
+                    for marker in ('formulaire_lead', 'formulaire_micro_entrepreneur',
+                                   'pushLeadEvents', 'googletagmanager.com'):
+                        self.assertNotIn(marker, code, f'{site}/{name}')
+
+
+class ContainerPolicyTests(unittest.TestCase):
+    """Règles du fichier GTM_PAR_GROUPE.md : un seul conteneur par page,
+    GTM-WMVZJKS réservé aux pages listées, GTM-53SH7D7F partout ailleurs."""
+
+    def test_un_seul_conteneur_par_page(self):
+        for path in html_pages():
+            with self.subTest(page=path.relative_to(ROOT).as_posix()):
+                state = gtm_state(path)
+                self.assertLessEqual(len(state['ids']), 1, 'plusieurs conteneurs sur la même page')
+                self.assertLessEqual(state['loaders'], 1, 'plusieurs chargeurs GTM')
+                self.assertEqual(state['script'], state['ids'], 'ID présent hors chargeur')
+                if state['noscript']:
+                    self.assertEqual(state['noscript'], state['script'],
+                                     'le noscript ne pointe pas vers le conteneur du script')
+
+    def test_conteneur_conforme_au_groupe(self):
+        attendu = set(CONTENEURS['GTM-WMVZJKS'])
+        for path in html_pages():
+            state = gtm_state(path)
+            if not state['ids']:
+                continue
+            site = path.parent.relative_to(ROOT).as_posix()
+            with self.subTest(page=path.relative_to(ROOT).as_posix()):
+                cible = 'GTM-WMVZJKS' if site in attendu else CONTENEURS['defaut']
+                self.assertEqual(state['script'], [cible])
+
+    def test_groupe_wmvzjks_est_intact(self):
+        self.assertEqual(len(CONTENEURS['GTM-WMVZJKS']), 14)
+        for site in CONTENEURS['GTM-WMVZJKS']:
+            with self.subTest(site=site):
+                state = gtm_state(ROOT / site / 'index.html')
+                self.assertEqual(state['script'], ['GTM-WMVZJKS'])
+
+    def test_balises_script_equilibrees(self):
+        """Retirer un chargeur GTM ne doit pas emporter une balise </script>
+        voisine : certains gabarits la placent sur la même ligne que le
+        commentaire GTM, ce qui casse tout le HTML qui suit."""
+        for path in html_pages():
+            with self.subTest(page=path.relative_to(ROOT).as_posix()):
+                text = path.read_text(encoding='utf-8', errors='replace')
+                ouvrantes = len(re.findall(r'<script[\s>]', text))
+                fermantes = len(re.findall(r'</script>', text))
+                self.assertEqual(ouvrantes, fermantes)
+
+    def test_vehicules_utilitaires_aligne_sur_le_conteneur_par_defaut(self):
+        # Absente du document : elle doit utiliser le conteneur par défaut.
+        state = gtm_state(ROOT / 'vehicules-utilitaires' / 'index.html')
+        self.assertEqual(state['script'], ['GTM-53SH7D7F'])
+        self.assertEqual(state['noscript'], ['GTM-53SH7D7F'])
 
 
 if __name__ == '__main__':

@@ -17,7 +17,7 @@
 
 ## SEO
 - H1 : **9** ⚠ à corriger (0 ou plusieurs)
-- GTM : GTM-53SH7D7F
+- GTM : absent
 - Éléments ajoutés automatiquement : meta description (auto — à relire), canonical
 - Liens vers d'autres pages du dépôt (à trancher) : aucun
 
