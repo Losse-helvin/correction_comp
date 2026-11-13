@@ -57,7 +57,7 @@ class RestoredGtmTests(unittest.TestCase):
                 self.assertEqual(html.count('https://www.googletagmanager.com/gtm.js'), 1)
 
     def test_pages_sans_gtm_sans_chargeur_ni_evenements(self):
-        self.assertEqual(len(PAGES_SANS_GTM), 105)
+        self.assertEqual(len(PAGES_SANS_GTM), 99)
         for site in PAGES_SANS_GTM:
             with self.subTest(site=site):
                 folder = ROOT / site
