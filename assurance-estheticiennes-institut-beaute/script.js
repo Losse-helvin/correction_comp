@@ -1136,6 +1136,10 @@ try {
       });
     }
     window.dataLayer.push(eventData);
+    /* Conversion signalée au parent (wrapper iframe) : l'événement émis
+       dans le dataLayer de l'iframe n'est pas vu par le conteneur GTM
+       chargé sur la page hôte. */
+    parentBridgePost({ type: 'lead-submitted' });
   }
 
   function submitLead() {
