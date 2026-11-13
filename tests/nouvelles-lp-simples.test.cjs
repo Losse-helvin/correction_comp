@@ -5,6 +5,7 @@ const path = require('node:path');
 const {JSDOM, VirtualConsole} = require('jsdom');
 const root=path.resolve(__dirname,'..');
 const registre=require('./registre-formid.json');
+const sansGtm=new Set(require('./pages-sans-gtm.json'));
 const wait=()=>new Promise(r=>setTimeout(r,25));
 
 for (const site of ['primagaz', 'dacia-jogger', 'renault-capture', 'intuis', 'sage-gestion-de-la-paie-hd', 'ayvens-france', 'mitsubishi-fuso']) {
@@ -93,7 +94,7 @@ for (const site of ['primagaz', 'dacia-jogger', 'renault-capture', 'intuis', 'sa
         assert.equal(sheetBody.get('reponse_5'),payload.data.reponse_5);
       }
       sheets=true;w.jQuery(form).trigger('submit');await wait();
-      assert.equal(form.style.display,'none');assert.equal(w.dataLayer.filter(x=>x.event==='formulaire_lead').length,1);
+      assert.equal(form.style.display,'none');assert.equal(w.dataLayer.filter(x=>x.event==='formulaire_lead').length, sansGtm.has(site) ? 0 : 1);
     } finally {dom.window.close();}
   });
 }

@@ -17,16 +17,6 @@ PAGES = {
 }
 
 
-REFERENCE_PAGES = [
-    'assurance-test-telephone', 'assurances-professionnelles',
-    'ayvens-france', 'cartes-carburant', 'dacia-jogger', 'edenred-kadeos',
-    'formulaire-globale', 'gamme-de-rayonnage-actiflip-hd', 'gamme-de-rayonnage-actiflip-v4',
-    'intuis', 'lexus-lbx', 'mitsubishi-fuso', 'paritel',
-    'paritel-vous-rembourse', 'primagaz', 'primagaz-obtenez-votre-gaz-propane-a-prix-fixe',
-    'rc-pro-consultant-conseil-adw', 'renault-capture', 'sage-gestion-de-la-paie-hd',
-    'sauvie-defibrillateurs-en-entreprise', 'toyota-gamme-hybride', 'volvo',
-]
-
 PAGES_SANS_GTM = json.loads((ROOT / 'tests' / 'pages-sans-gtm.json').read_text(encoding='utf-8'))
 CONTENEURS = json.loads((ROOT / 'tests' / 'gtm-conteneurs.json').read_text(encoding='utf-8'))
 
@@ -51,21 +41,6 @@ def gtm_state(path):
 
 
 class RestoredGtmTests(unittest.TestCase):
-    def test_conteneur_reference_des_formulaires_restants(self):
-        self.assertEqual(len(REFERENCE_PAGES), 22)
-        for site in REFERENCE_PAGES:
-            with self.subTest(site=site):
-                folder = ROOT / site
-                html = (folder / 'index.html').read_text(encoding='utf-8')
-                page = Page()
-                page.feed(html)
-                self.assertEqual(active_gtm(page.scripts), ['GTM-53SH7D7F'])
-                consent = re.search(r"gtag\(['\"]consent['\"],\s*['\"]default", html)
-                self.assertIsNotNone(consent)
-                self.assertLess(consent.start(), html.index('https://www.googletagmanager.com/gtm.js'))
-                self.assertEqual(html.count('https://www.googletagmanager.com/gtm.js'), 1)
-
-
     def test_identifiant_et_ordre_consentement(self):
         for site, expected in PAGES.items():
             with self.subTest(site=site):
@@ -82,7 +57,7 @@ class RestoredGtmTests(unittest.TestCase):
                 self.assertEqual(html.count('https://www.googletagmanager.com/gtm.js'), 1)
 
     def test_pages_sans_gtm_sans_chargeur_ni_evenements(self):
-        self.assertEqual(len(PAGES_SANS_GTM), 29)
+        self.assertEqual(len(PAGES_SANS_GTM), 105)
         for site in PAGES_SANS_GTM:
             with self.subTest(site=site):
                 folder = ROOT / site
@@ -99,8 +74,10 @@ class RestoredGtmTests(unittest.TestCase):
                     self.assertNotIn('pushLeadEvents', code)
                     self.assertNotIn('formulaire_lead', code)
                     self.assertNotIn('formulaire_micro_entrepreneur', code)
-                script = (folder / 'script.js').read_text(encoding='utf-8')
-                self.assertNotIn('cookie_preferences_updated', script)
+                script_path = folder / 'script.js'
+                if script_path.exists():
+                    script = script_path.read_text(encoding='utf-8')
+                    self.assertNotIn('cookie_preferences_updated', script)
                 # Certains gabarits poussaient la conversion depuis script.js,
                 # sans lead-handler.js : les deux fichiers doivent être propres.
                 for name in ('script.js', 'lead-handler.js', 'verification-sms.js'):

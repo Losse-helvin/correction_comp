@@ -86,8 +86,7 @@ var UBE_CONFIG = {
 
 
   /* ---- Collecte du tracking : SANS CONDITION DE CONSENTEMENT (révision 10/11/2026)
-     Le tracking URL (utm_*, ltm_*, click IDs) et son envoi au CRM / Google Sheets /
-     GTM s'exécutent désormais quel que soit l'état du consentement. Aucune valeur
+     Le tracking URL (utm_*, ltm_*, click IDs) et son envoi au CRM / Google Sheets s'exécutent désormais quel que soit l'état du consentement. Aucune valeur
      par défaut : si l'URL n'apporte rien, le champ reste vide. */
 
   var TRACKING_DEFS = [
@@ -694,41 +693,6 @@ var UBE_CONFIG = {
     }).finally(function () { if (timer) window.clearTimeout(timer); });
   }
 
-  /* ================= GTM ================= */
-  function pushLeadEvents(data) {
-    window.dataLayer = window.dataLayer || [];
-    var micro = estMicro(data);
-    var eventData = {
-      event: micro ? 'formulaire_micro_entrepreneur' : 'formulaire_lead',
-      form_id: CONFIG.formId,
-      form_name: CONFIG.formName,
-      lead_type: micro ? 'micro_entrepreneur' : 'standard',
-      telephone_verifie: data.telephone_verifie === 'oui'
-    };
-    if (analyticsGranted()) {
-      if (parentLandingUrlReceived) eventData.page_url = clean(trackedPageUrl || entryUrl, 1000);
-      eventData.categorie = clean(data.categorie || '', 200);
-      eventData.lead_source = clean(data.source || '', 200);
-      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id',
-        'utm_category', 'utm_user', 'ltm_source', 'ltm_category', 'ltm_typ', 'ltm_user'].forEach(function (key) {
-        if (data[key]) eventData[key] = data[key];
-      });
-    }
-    if (marketingGranted()) {
-      CLICK_IDS.forEach(function (key) {
-        if (data[key]) eventData[key] = data[key];
-      });
-      eventData.user_data = {
-        email: data.mail || '',
-        phone_number: versE164(data.telephone || ''),
-        address: {
-          first_name: data.prenom || '', last_name: data.nom || '',
-          postal_code: data.code_postal || '', country: 'FR'
-        }
-      };
-    }
-    window.dataLayer.push(eventData);
-  }
 
   /* ================= Soumission ================= */
   var msg = null;
@@ -856,7 +820,6 @@ var UBE_CONFIG = {
       if (!sheet.ok) debugLog('\u00c9chec du transport Google Sheets.', sheet.error);
       // Un beacon accepté ou une réponse opaque ne confirme pas la réception.
       if ((crm.ok && crm.result.confirmed) || (sheet.ok && sheet.result.confirmed)) {
-        pushLeadEvents(data);
         sauvegarderEtRediriger(data);
         showMerci();
       } else {
