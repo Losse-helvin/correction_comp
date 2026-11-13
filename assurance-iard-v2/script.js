@@ -3698,16 +3698,10 @@ function closeNav() {
             return null;
         }
         // --- 6. Gestion des préférences de consentement ---
-        // Fonction pour sauvegarder les préférences et les pousser au DataLayer et au Consent Mode V2
+        // Fonction pour sauvegarder les préférences et mettre à jour le Consent Mode V2
         function savePreferences(preferences) {
             // Stocker les préférences dans un cookie du navigateur
             setBrowserCookie(COOKIE_NAME, JSON.stringify(preferences), COOKIE_EXPIRATION_DAYS);
-            // Pousser les préférences dans le DataLayer pour GTM (balises non-Google principalement)
-            window.dataLayer.push({
-                'event': 'cookie_preferences_updated',
-                'consent_analytics': preferences.analytics,
-                'consent_marketing': preferences.marketing                                
-            });
             // Mettre à jour le Consent Mode V2 de Google
             // Mappe vos préférences aux catégories de Google
             gtag('consent', 'update', {
@@ -3717,7 +3711,7 @@ function closeNav() {
                 'ad_personalization': preferences.marketing ? 'granted' : 'denied'                
                 // security_storage est généralement 'granted' et n'est pas mis à jour par l'utilisateur
             });
-            console.log('Préférences de cookies enregistrées, DataLayer et Consent Mode V2 mis à jour :', preferences);
+            console.log('Préférences de cookies enregistrées, Consent Mode V2 mis à jour :', preferences);
             hideBannerAndModal();
         }
         // Fonction pour charger les préférences stockées
@@ -4139,14 +4133,7 @@ function closeNav() {
 
 	$('.form-ass').submit(function(e){
     e.preventDefault();
-    let valeur_transfere = "formulaire_lead";
-    if ($('input[name=reponse_3]:checked').val() == 'Oui')
-    {
-    	valeur_transfere = "formulaire_micro_entrepreneur";
-    }    
-    dataLayer.push({
-      "event": valeur_transfere,
-    });    
+    // Conversion GTM retirée : cette page est désormais sans GTM.
   });
 
 } catch (e) { console.error("[lp2site] script 1 en échec :", e); }

@@ -9,6 +9,7 @@
 - Correspondance établie en priorité depuis la mention **Page source** des fichiers `rapport-site.md` (95 entrées), puis par le nom du dossier lorsque le fichier existe (2 entrées : mentions légales et politique de confidentialité).
 - Dans le dépôt, les pages sont généralement rangées sous la forme `<dossier>/index.html`, et non `<nom>.html`.
 - **GTM après suppression demandée : 74 pages retrouvées avec `GTM-53SH7D7F`, 23 sans GTM** : les 21 sous-pages nettoyées, plus `mentions-legales` et `politique-de-confidentialite-donnees-personnelles`.
+- **Mise à jour ultérieure (conformité GTM par groupe)** : 8 pages supplémentaires — absentes de cette liste — ont été entièrement débarrassées de GTM (`assurance-agriculteur-v2`, `assurance-iard-v2`, `assurance-tns`, `remerciement-carte-cadeau`, `remerciement-panneaux-solaire`, `remerciement-ticket-restaurant`, `remerciement-ticket-restaurant-v2`, `remerciements-panneaux-solaires`), et `vehicules-utilitaires` est passé de `GTM-WMVZJKS` à `GTM-53SH7D7F`. Les chiffres ci-dessus restent valables pour les 97 entrées de cette liste. Voir `CONFORMITE-GTM.md`.
 
 ## Points importants
 
