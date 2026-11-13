@@ -8,7 +8,7 @@
 - **7 entrées absentes du dépôt** : toutes dans la liste des sous-pages.
 - Correspondance établie en priorité depuis la mention **Page source** des fichiers `rapport-site.md` (95 entrées), puis par le nom du dossier lorsque le fichier existe (2 entrées : mentions légales et politique de confidentialité).
 - Dans le dépôt, les pages sont généralement rangées sous la forme `<dossier>/index.html`, et non `<nom>.html`.
-- **GTM actuel sur les 97 pages retrouvées : 95 avec `GTM-53SH7D7F`, 2 sans GTM** (`mentions-legales` et `politique-de-confidentialite-donnees-personnelles`).
+- **GTM après suppression demandée : 74 pages retrouvées avec `GTM-53SH7D7F`, 23 sans GTM** : les 21 sous-pages nettoyées, plus `mentions-legales` et `politique-de-confidentialite-donnees-personnelles`.
 
 ## Points importants
 
@@ -16,7 +16,7 @@
 - `lexus-lbx.html` correspond à **`lexus-lbx/index.html`**, tandis que la sous-page `lexus/lbx.html` correspond à **`lexus-lbx-2/index.html`**.
 - `template-2.html` correspond à **`template-2/index.html`** ; ce n’est pas une preuve de correspondance avec `temlpate-webflow/comparateur-2.html`, `comparateur-3.html` ou `comparateur-4.html`, qui sont absents.
 - `nicolas/ayvens.html` ne doit pas être confondu avec `ayvens-france.html`, déjà retrouvé séparément dans `ayvens-france/index.html`.
-- Le récapitulatif fourni indique des sous-pages « sans GTM ». Dans le code actuel du dépôt, **les 21 sous-pages retrouvées ont toutes un chargeur `GTM-53SH7D7F`**. Il peut s’agir d’un état antérieur de l’export source.
+- Le récapitulatif fourni indiquait des sous-pages « sans GTM ». **Les 21 sous-pages retrouvées ont été nettoyées : plus de chargeur GTM, plus de fallback GTM et plus d’événements dataLayer dédiés à GTM.** Voir `SUPPRESSION-GTM-PAGES-SANS-GTM.md`.
 
 ## 1. Pages principales — 76
 
@@ -103,49 +103,49 @@
 
 | # | Nom fourni | Chemin réel dans le dépôt | GTM actuel | Statut |
 |---:|---|---|---|---|
-| 1 | `alfaromeo/tonale-remerciement.html` | [`alfaromeo-tonale-remerciement/index.html`](alfaromeo-tonale-remerciement/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 2 | `alfaromeo/tonale.html` | [`alfaromeo-tonale/index.html`](alfaromeo-tonale/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 3 | `lexus/lbx.html` | [`lexus-lbx-2/index.html`](lexus-lbx-2/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 4 | `mercedes-benz/mercedes-benz-evito.html` | [`mercedes-benz-mercedes-benz-evito/index.html`](mercedes-benz-mercedes-benz-evito/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 5 | `mercedes-benz/nouvel-ecitan-fourgon.html` | [`mercedes-benz-nouvel-ecitan-fourgon/index.html`](mercedes-benz-nouvel-ecitan-fourgon/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 6 | `mercedes-benz/sprinter.html` | [`mercedes-benz-sprinter/index.html`](mercedes-benz-sprinter/index.html) | `GTM-53SH7D7F` | Trouvé |
+| 1 | `alfaromeo/tonale-remerciement.html` | [`alfaromeo-tonale-remerciement/index.html`](alfaromeo-tonale-remerciement/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 2 | `alfaromeo/tonale.html` | [`alfaromeo-tonale/index.html`](alfaromeo-tonale/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 3 | `lexus/lbx.html` | [`lexus-lbx-2/index.html`](lexus-lbx-2/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 4 | `mercedes-benz/mercedes-benz-evito.html` | [`mercedes-benz-mercedes-benz-evito/index.html`](mercedes-benz-mercedes-benz-evito/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 5 | `mercedes-benz/nouvel-ecitan-fourgon.html` | [`mercedes-benz-nouvel-ecitan-fourgon/index.html`](mercedes-benz-nouvel-ecitan-fourgon/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 6 | `mercedes-benz/sprinter.html` | [`mercedes-benz-sprinter/index.html`](mercedes-benz-sprinter/index.html) | Aucun (GTM supprimé) | Trouvé |
 | 7 | `nicolas/ayvens.html` | — | — | **Absent** |
 | 8 | `nicolas/form-test.html` | — | — | **Absent** |
 | 9 | `nicolas/formly.html` | — | — | **Absent** |
-| 10 | `panneaux-photovoltaiques/panneaux-photovoltaique-valider.html` | [`panneaux-photovoltaiques-panneaux-photovoltaique-valider/index.html`](panneaux-photovoltaiques-panneaux-photovoltaique-valider/index.html) | `GTM-53SH7D7F` | Trouvé |
+| 10 | `panneaux-photovoltaiques/panneaux-photovoltaique-valider.html` | [`panneaux-photovoltaiques-panneaux-photovoltaique-valider/index.html`](panneaux-photovoltaiques-panneaux-photovoltaique-valider/index.html) | Aucun (GTM supprimé) | Trouvé |
 | 11 | `temlpate-webflow/comparateur-2.html` | — | — | **Absent** |
 | 12 | `temlpate-webflow/comparateur-3.html` | — | — | **Absent** |
 | 13 | `temlpate-webflow/comparateur-4.html` | — | — | **Absent** |
-| 14 | `typ-formulaires/caisses-thank-you-page.html` | [`typ-formulaires-caisses-thank-you-page/index.html`](typ-formulaires-caisses-thank-you-page/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 15 | `typ-formulaires/energie-thank-you-page.html` | [`typ-formulaires-energie-thank-you-page/index.html`](typ-formulaires-energie-thank-you-page/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 16 | `typ-formulaires/form-typ-vehicules.html` | [`typ-formulaires-form-typ-vehicules/index.html`](typ-formulaires-form-typ-vehicules/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 17 | `typ-formulaires/panneaux-photovoltaiques.html` | [`typ-formulaires-panneaux-photovoltaiques/index.html`](typ-formulaires-panneaux-photovoltaiques/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 18 | `typ-formulaires/panneaux-thank-you-page.html` | [`typ-formulaires-panneaux-thank-you-page/index.html`](typ-formulaires-panneaux-thank-you-page/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 19 | `typ-formulaires/securite-thank-you-page.html` | [`typ-formulaires-securite-thank-you-page/index.html`](typ-formulaires-securite-thank-you-page/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 20 | `typ-formulaires/typ-caisses-enregistreuse.html` | [`typ-formulaires-typ-caisses-enregistreuse/index.html`](typ-formulaires-typ-caisses-enregistreuse/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 21 | `typ-formulaires/typ-energie-form.html` | [`typ-formulaires-typ-energie-form/index.html`](typ-formulaires-typ-energie-form/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 22 | `typ-formulaires/typ-log-entreprise.html` | [`typ-formulaires-typ-log-entreprise/index.html`](typ-formulaires-typ-log-entreprise/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 23 | `typ-formulaires/typ-panneaux-form.html` | [`typ-formulaires-typ-panneaux-form/index.html`](typ-formulaires-typ-panneaux-form/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 24 | `typ-formulaires/typ-secu-form.html` | [`typ-formulaires-typ-secu-form/index.html`](typ-formulaires-typ-secu-form/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 25 | `typ-formulaires/vehicules-thank-you-page.html` | [`typ-formulaires-vehicules-thank-you-page/index.html`](typ-formulaires-vehicules-thank-you-page/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 26 | `voiture/nouveau-range-rover.html` | [`voiture-nouveau-range-rover/index.html`](voiture-nouveau-range-rover/index.html) | `GTM-53SH7D7F` | Trouvé |
-| 27 | `voiture/range-rover.html` | [`voiture-range-rover/index.html`](voiture-range-rover/index.html) | `GTM-53SH7D7F` | Trouvé |
+| 14 | `typ-formulaires/caisses-thank-you-page.html` | [`typ-formulaires-caisses-thank-you-page/index.html`](typ-formulaires-caisses-thank-you-page/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 15 | `typ-formulaires/energie-thank-you-page.html` | [`typ-formulaires-energie-thank-you-page/index.html`](typ-formulaires-energie-thank-you-page/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 16 | `typ-formulaires/form-typ-vehicules.html` | [`typ-formulaires-form-typ-vehicules/index.html`](typ-formulaires-form-typ-vehicules/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 17 | `typ-formulaires/panneaux-photovoltaiques.html` | [`typ-formulaires-panneaux-photovoltaiques/index.html`](typ-formulaires-panneaux-photovoltaiques/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 18 | `typ-formulaires/panneaux-thank-you-page.html` | [`typ-formulaires-panneaux-thank-you-page/index.html`](typ-formulaires-panneaux-thank-you-page/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 19 | `typ-formulaires/securite-thank-you-page.html` | [`typ-formulaires-securite-thank-you-page/index.html`](typ-formulaires-securite-thank-you-page/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 20 | `typ-formulaires/typ-caisses-enregistreuse.html` | [`typ-formulaires-typ-caisses-enregistreuse/index.html`](typ-formulaires-typ-caisses-enregistreuse/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 21 | `typ-formulaires/typ-energie-form.html` | [`typ-formulaires-typ-energie-form/index.html`](typ-formulaires-typ-energie-form/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 22 | `typ-formulaires/typ-log-entreprise.html` | [`typ-formulaires-typ-log-entreprise/index.html`](typ-formulaires-typ-log-entreprise/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 23 | `typ-formulaires/typ-panneaux-form.html` | [`typ-formulaires-typ-panneaux-form/index.html`](typ-formulaires-typ-panneaux-form/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 24 | `typ-formulaires/typ-secu-form.html` | [`typ-formulaires-typ-secu-form/index.html`](typ-formulaires-typ-secu-form/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 25 | `typ-formulaires/vehicules-thank-you-page.html` | [`typ-formulaires-vehicules-thank-you-page/index.html`](typ-formulaires-vehicules-thank-you-page/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 26 | `voiture/nouveau-range-rover.html` | [`voiture-nouveau-range-rover/index.html`](voiture-nouveau-range-rover/index.html) | Aucun (GTM supprimé) | Trouvé |
+| 27 | `voiture/range-rover.html` | [`voiture-range-rover/index.html`](voiture-range-rover/index.html) | Aucun (GTM supprimé) | Trouvé |
 | 28 | `webflow/template-1.html` | — | — | **Absent** |
 
 ## 3. Récap par sous-dossier demandé
 
 | Sous-dossier fourni | Entrées | Retrouvées | Absentes | GTM actuel sur les pages retrouvées |
 |---|---:|---:|---:|---|
-| `alfaromeo/` | 2 | 2 | 0 | GTM-53SH7D7F (2) |
-| `lexus/` | 1 | 1 | 0 | GTM-53SH7D7F (1) |
-| `mercedes-benz/` | 3 | 3 | 0 | GTM-53SH7D7F (3) |
+| `alfaromeo/` | 2 | 2 | 0 | Aucun (GTM supprimé) |
+| `lexus/` | 1 | 1 | 0 | Aucun (GTM supprimé) |
+| `mercedes-benz/` | 3 | 3 | 0 | Aucun (GTM supprimé) |
 | `nicolas/` | 3 | 0 | 3 | — |
-| `panneaux-photovoltaiques/` | 1 | 1 | 0 | GTM-53SH7D7F (1) |
+| `panneaux-photovoltaiques/` | 1 | 1 | 0 | Aucun (GTM supprimé) |
 | `temlpate-webflow/` | 3 | 0 | 3 | — |
-| `typ-formulaires/` | 12 | 12 | 0 | GTM-53SH7D7F (12) |
-| `voiture/` | 2 | 2 | 0 | GTM-53SH7D7F (2) |
+| `typ-formulaires/` | 12 | 12 | 0 | Aucun (GTM supprimé) |
+| `voiture/` | 2 | 2 | 0 | Aucun (GTM supprimé) |
 | `webflow/` | 1 | 0 | 1 | — |
-| **Total** | **28** | **21** | **7** | **21 avec GTM-53SH7D7F** |
+| **Total** | **28** | **21** | **7** | **21 sans GTM (supprimé)** |
 
 ## 4. Entrées absentes — 7
 

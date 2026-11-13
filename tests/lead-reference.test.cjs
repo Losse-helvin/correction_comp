@@ -5,6 +5,7 @@ const path = require('node:path');
 const { JSDOM } = require('jsdom');
 const jquery = require('jquery');
 const root = path.resolve(__dirname, '..');
+const sansGtm = new Set(require('./pages-sans-gtm.json'));
 const wait = () => new Promise(r => setTimeout(r, 20));
 
 async function setup(site, opts = {}) {
@@ -80,7 +81,7 @@ for (const site of ['LP_reference', 'vehicules-utilitaires', 'assurance-tns', 'a
          le click ID et la catégorie de l'URL doivent donc remonter. */
       assert.equal(body.get('gclid'), 'abc');
       assert.equal(body.get('categorie'), 'campagne');
-      assert.equal(c.w.dataLayer.filter(x => x.event === 'formulaire_lead').length, 1);
+      assert.equal(c.w.dataLayer.filter(x => x.event === 'formulaire_lead').length, sansGtm.has(site) ? 0 : 1);
     } finally { c.dom.window.close(); }
   });
   test(`${site} : réponse SMS périmée ignorée`, async () => {
@@ -101,9 +102,13 @@ for (const site of ['LP_reference', 'vehicules-utilitaires', 'assurance-tns', 'a
       assert.equal(c.form.style.display, 'none');
       const crm = JSON.parse(c.requests.find(x => x.kind === 'crm-cors').body).payload;
       assert.equal(crm.data.telephone_verifie, 'oui');
-      const event = c.w.dataLayer.find(x => x.event === 'formulaire_lead');
-      assert.equal(event.gclid, 'abc'); assert.equal(event.categorie, 'campagne');
-      assert.equal(event.user_data.email, 'test@example.test');
+      if (sansGtm.has(site)) {
+        assert.equal(c.w.dataLayer.filter(x => x.event === 'formulaire_lead').length, 0);
+      } else {
+        const event = c.w.dataLayer.find(x => x.event === 'formulaire_lead');
+        assert.equal(event.gclid, 'abc'); assert.equal(event.categorie, 'campagne');
+        assert.equal(event.user_data.email, 'test@example.test');
+      }
     } finally { c.dom.window.close(); }
     const d = await setup(site); try {
       await code(d); await verify(d); d.form.querySelector('[name="website"]').value='spam'; await submit(d);
@@ -162,7 +167,7 @@ for (const site of ['LP_reference', 'vehicules-utilitaires', 'assurance-tns', 'a
     assert.equal(w.dataLayer.filter(x => x.event === 'formulaire_lead').length, 0);
     sheetOk = true; w.jQuery(f).trigger('submit'); await wait();
     assert.equal(f.style.display, 'none');
-    assert.equal(w.dataLayer.filter(x => x.event === 'formulaire_lead').length, 1);
+    assert.equal(w.dataLayer.filter(x => x.event === 'formulaire_lead').length, sansGtm.has(site) ? 0 : 1);
     assert.equal(calls.filter(x => x === 'crm').length, 2);
     assert.equal(calls.filter(x => x === 'sheet').length, 2);
   } finally { dom.window.close(); }

@@ -1,3 +1,4 @@
+import json
 import re
 import sys
 import unittest
@@ -18,20 +19,21 @@ PAGES = {
 
 
 REFERENCE_PAGES = [
-    'alfaromeo-tonale', 'assurance-test-telephone', 'assurances-professionnelles',
+    'assurance-test-telephone', 'assurances-professionnelles',
     'ayvens-france', 'cartes-carburant', 'dacia-jogger', 'edenred-kadeos',
     'formulaire-globale', 'gamme-de-rayonnage-actiflip-hd', 'gamme-de-rayonnage-actiflip-v4',
-    'intuis', 'lexus-lbx', 'lexus-lbx-2', 'mitsubishi-fuso', 'paritel',
+    'intuis', 'lexus-lbx', 'mitsubishi-fuso', 'paritel',
     'paritel-vous-rembourse', 'primagaz', 'primagaz-obtenez-votre-gaz-propane-a-prix-fixe',
     'rc-pro-consultant-conseil-adw', 'renault-capture', 'sage-gestion-de-la-paie-hd',
-    'sauvie-defibrillateurs-en-entreprise', 'toyota-gamme-hybride', 'typ-formulaires-typ-secu-form',
-    'voiture-nouveau-range-rover', 'voiture-range-rover', 'volvo',
+    'sauvie-defibrillateurs-en-entreprise', 'toyota-gamme-hybride', 'volvo',
 ]
+
+PAGES_SANS_GTM = json.loads((ROOT / 'tests' / 'pages-sans-gtm.json').read_text(encoding='utf-8'))
 
 
 class RestoredGtmTests(unittest.TestCase):
     def test_conteneur_reference_des_formulaires_restants(self):
-        self.assertEqual(len(REFERENCE_PAGES), 27)
+        self.assertEqual(len(REFERENCE_PAGES), 22)
         for site in REFERENCE_PAGES:
             with self.subTest(site=site):
                 folder = ROOT / site
@@ -59,6 +61,27 @@ class RestoredGtmTests(unittest.TestCase):
                 self.assertIsNotNone(consent)
                 self.assertLess(consent.start(), loader)
                 self.assertEqual(html.count('https://www.googletagmanager.com/gtm.js'), 1)
+
+    def test_pages_sans_gtm_sans_chargeur_ni_evenements(self):
+        self.assertEqual(len(PAGES_SANS_GTM), 21)
+        for site in PAGES_SANS_GTM:
+            with self.subTest(site=site):
+                folder = ROOT / site
+                html = (folder / 'index.html').read_text(encoding='utf-8')
+                page = Page()
+                page.feed(html)
+                self.assertEqual(active_gtm(page.scripts), [])
+                self.assertNotIn('googletagmanager.com/gtm.js', html)
+                self.assertNotIn('googletagmanager.com/ns.html', html)
+                self.assertNotIn('GTM-', html)
+                handler = folder / 'lead-handler.js'
+                if handler.exists():
+                    code = handler.read_text(encoding='utf-8')
+                    self.assertNotIn('pushLeadEvents', code)
+                    self.assertNotIn('formulaire_lead', code)
+                    self.assertNotIn('formulaire_micro_entrepreneur', code)
+                script = (folder / 'script.js').read_text(encoding='utf-8')
+                self.assertNotIn('cookie_preferences_updated', script)
 
 
 if __name__ == '__main__':
