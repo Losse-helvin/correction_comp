@@ -90,6 +90,65 @@ class RestoredGtmTests(unittest.TestCase):
                         self.assertNotIn(marker, code, f'{site}/{name}')
 
 
+GROUPE_1 = [
+    'LP_reference', 'agriculteur', 'assurance/agriculteur',
+    'assurance/assurance-professionnelle-iard-cookie', 'assurance/multirisques',
+    'assurance/professionnelle-iard', 'assurance/protection-sociale-collective',
+    'assurance/protection-sociale-collective-v4', 'assurance/rc-pro',
+    'assurance-agriculteur', 'assurance-agriculteur-v2',
+    'assurance-assurance-professionnelle-iard-cookie',
+    'assurance-consultant-societe-conseil-v2', 'assurance-consultants-societe-conseil',
+    'assurance-consultants-societe-conseil - Copie',
+    'assurance-estheticienne-institut-beaute',
+    'assurance-estheticiennes-institut-beaute',
+    'assurance-estheticiennes-instituts-beaute',
+    'assurance-estheticiennes-instituts-beaute-v1', 'assurance-iard-v2',
+    'assurance-multirisques', 'assurance-professionnelle-iard',
+    'assurance-professionnelle-tns-v2/assurance-tns-pro-v2-adw',
+    'assurance-protection-sociale-collective',
+    'assurance-protection-sociale-collective-v4', 'assurance-rc-pro',
+    'assurance-tns', 'assurance-tns-pro-v2-adw', 'assurances-professionnelles',
+    'protection-sociale-collective', 'solutions-agv-amr', 'vehicules-utilitaires',
+]
+
+
+class GroupeUnTests(unittest.TestCase):
+    """Instruction GTM : chargeur dans <head>, noscript juste après <body>,
+    et evenement formulaire_lead a la validation du formulaire."""
+
+    def test_chargeur_dans_le_head_et_noscript_apres_body(self):
+        self.assertEqual(len(GROUPE_1), 32)
+        for site in GROUPE_1:
+            with self.subTest(site=site):
+                html = (ROOT / site / 'index.html').read_text(encoding='utf-8')
+                state = gtm_state(ROOT / site / 'index.html')
+                self.assertEqual(state['script'], ['GTM-53SH7D7F'])
+                self.assertEqual(state['noscript'], ['GTM-53SH7D7F'])
+                self.assertEqual(state['loaders'], 1)
+                bas = html.lower()
+                self.assertLess(bas.index('googletagmanager.com/gtm.js'), bas.index('</head>'),
+                                'chargeur hors du <head>')
+                self.assertGreater(bas.index('ns.html'), bas.index('<body'),
+                                   'noscript avant <body>')
+
+    def test_evenement_formulaire_lead_present(self):
+        for site in GROUPE_1:
+            with self.subTest(site=site):
+                dossier = ROOT / site
+                sources = [dossier / 'index.html']
+                sources += [p for p in dossier.rglob('*.js') if 'node_modules' not in p.parts]
+                pousse = any('formulaire_lead' in p.read_text(encoding='utf-8', errors='replace')
+                             for p in sources if p.is_file())
+                self.assertTrue(pousse, 'aucun formulaire_lead pousse')
+
+    def test_wrapper_estheticiennes_relaie_la_conversion(self):
+        parent = (ROOT / 'assurance-estheticiennes-instituts-beaute' / 'script.js').read_text(encoding='utf-8')
+        enfant = (ROOT / 'assurance-estheticiennes-institut-beaute' / 'script.js').read_text(encoding='utf-8')
+        self.assertIn("'lead-submitted'", parent)
+        self.assertIn("event: 'formulaire_lead'", parent)
+        self.assertIn("parentBridgePost({ type: 'lead-submitted' })", enfant)
+
+
 class ContainerPolicyTests(unittest.TestCase):
     """Règles du fichier GTM_PAR_GROUPE.md : un seul conteneur par page,
     GTM-WMVZJKS réservé aux pages listées, GTM-53SH7D7F partout ailleurs."""

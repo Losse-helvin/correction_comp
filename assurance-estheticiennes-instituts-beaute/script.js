@@ -158,6 +158,11 @@ WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,6
       postToFrame({ type: 'landing-url', url: campaignUrlForConsent(analytics, marketing) });
     } else if (message.type === 'sms-request') {
       handleSmsRequest(message);
+    } else if (message.type === 'lead-submitted') {
+      /* La conversion est validée dans l'iframe : le conteneur GTM de
+         cette page hôte doit recevoir l'événement dans SON dataLayer. */
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'formulaire_lead' });
     }
   });
   frame.addEventListener('load', startBridge);
