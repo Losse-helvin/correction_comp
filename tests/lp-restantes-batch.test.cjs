@@ -5,6 +5,7 @@ const path = require('node:path');
 const {JSDOM, VirtualConsole} = require('jsdom');
 const root=path.resolve(__dirname,'..');
 const registre=require('./registre-formid.json');
+const sansGtm=new Set(require('./pages-sans-gtm.json'));
 const wait=()=>new Promise(r=>setTimeout(r,25));
 const sites=['alfaromeo-tonale','sauvie-defibrillateurs-en-entreprise','edenred-kadeos','lexus-lbx','paritel','paritel-vous-rembourse','toyota-gamme-hybride','primagaz-obtenez-votre-gaz-propane-a-prix-fixe','cartes-carburant'];
 for(const site of sites) test(`${site} : identité, champs métier, SMS et livraison confirmée`,async()=>{
@@ -39,7 +40,7 @@ for(const site of sites) test(`${site} : identité, champs métier, SMS et livra
     if(site==='toyota-gamme-hybride')assert.equal(data.data.reponse_1,'Yaris Hybride');
     if(site.startsWith('paritel')){assert.equal(requests.find(x=>x.kind==='sheet').body.get('reponse_4'),data.data.reponse_4);assert.equal(requests.find(x=>x.kind==='sheet').body.get('reponse_5'),data.data.reponse_5);assert.equal(data.data.operateur_telephonie,'Opérateur exemple');assert.equal(w.lpLead.redirectPreview(),'https://www.comparateurpro.fr/paritel-typ');}
     if(site.startsWith('sauvie-')){assert.equal(data.data.reponse_1,'1');assert.equal(data.data.reponse_2,'Lour mon Défibrillater');assert.equal(data.data.reponse_3,'TPE/PME');assert.equal(data.data.consentement,'oui');}
-    sheetOk=true;w.jQuery(f).trigger('submit');await wait();assert.equal(f.style.display,'none');assert.equal(w.dataLayer.filter(x=>x.event==='formulaire_lead').length,1);const evt=w.dataLayer.find(x=>x.event==='formulaire_lead');assert.equal(evt.form_id,(registre[site]||{}).formId);assert.notEqual(evt.form_name,'Assurance-TNS-Pro-Form');assert.equal(evt.lead_type,'standard');/* Révision 10/11/2026 : les conversions améliorées partent sans consentement. */ assert.ok(evt.user_data && evt.user_data.email);
+    sheetOk=true;w.jQuery(f).trigger('submit');await wait();assert.equal(f.style.display,'none');const expectedLeadEvents=sansGtm.has(site)?0:1;assert.equal(w.dataLayer.filter(x=>x.event==='formulaire_lead').length,expectedLeadEvents);if(expectedLeadEvents){const evt=w.dataLayer.find(x=>x.event==='formulaire_lead');assert.equal(evt.form_id,(registre[site]||{}).formId);assert.notEqual(evt.form_name,'Assurance-TNS-Pro-Form');assert.equal(evt.lead_type,'standard');/* Révision 10/11/2026 : les conversions améliorées partent sans consentement. */ assert.ok(evt.user_data && evt.user_data.email);}
   } finally {dom.window.close();}
 });
 
